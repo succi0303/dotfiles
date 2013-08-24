@@ -18,6 +18,21 @@
 
 ### tmux
 
+### 設定ファイル
+
+* .tmux.conf
+
+### 外部ツール
+
+* tmux-MacOSX-pasteboard
+
+### 参考情報
+
+* [chirsJohnsen/tmux-MacOSX-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
+
+OSXのクリップボードとtmuxを連携させるための設定
+
+
 - - -
 
 ### vim
