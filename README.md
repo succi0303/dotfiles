@@ -18,15 +18,15 @@
 
 ### tmux
 
-### 設定ファイル
+#### 設定ファイル
 
 * .tmux.conf
 
-### 外部ツール
+#### 外部ツール
 
 * tmux-MacOSX-pasteboard
 
-### 参考情報
+#### 参考情報
 
 * [chirsJohnsen/tmux-MacOSX-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
 
@@ -36,12 +36,12 @@ OSXのクリップボードとtmuxを連携させるための設定
 
 ### vim
 
-### 設定ファイル
+#### 設定ファイル
 
 * .vimrc
 * .gvimrc
 
-### 外部ツール
+#### 外部ツール
 
 * MacVim-KaoriYa
 
@@ -61,6 +61,6 @@ OSXのクリップボードとtmuxを連携させるための設定
 * rbenv
 * MacVim
 
-### 参考情報
+#### 参考情報
 
 * [中島能和,zsh最強シェル入門,翔泳社](http://www.amazon.co.jp/zsh最強シェル入門-中島-能和/dp/479811815X)
