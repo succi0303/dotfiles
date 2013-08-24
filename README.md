@@ -1,22 +1,29 @@
 # dotfiles
 
-This is my dotfile repository
+## 概要
 
-## overview
+設定ファイル用のリポジトリです。
 
-個人的な設定ファイルのリポジトリです。
-
-利用環境は以下のとおり
+### 利用環境
 
 * OSX 10.8.x on MacBookAir'11
 
-対象アプリケーションは以下のとおり。
+### 対象アプリケーション
 
 * tmux
 * vim
 * zsh
 
+## tmux
+
+## vim
+
 ## zsh
+
+### 設定ファイル
+
+* .zshrc
+* .zshenv
 
 ### 外部ツール
 
