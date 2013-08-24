@@ -36,3 +36,7 @@
 * z
 * rbenv
 * MacVim
+
+### 参考情報
+
+* [中島能和,zsh最強シェル入門,翔泳社](http://www.amazon.co.jp/zsh最強シェル入門-中島-能和/dp/479811815X)
