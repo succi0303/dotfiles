@@ -41,6 +41,10 @@ OSXのクリップボードとtmuxを連携させるための設定
 * .vimrc
 * .gvimrc
 
+### 外部ツール
+
+* MacVim-KaoriYa
+
 - - -
 
 ### zsh
