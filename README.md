@@ -62,7 +62,7 @@ aliasの"tree"は「アリスとボブのGit入門レッスン」に記載され
 
 #### 参考情報
 
-* [chirsJohnsen/tmux-MacOSX-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
+* [ChirsJohnsen/tmux-MacOSX-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
 
 OSXのクリップボードとtmuxを連携させるための設定
 
@@ -93,8 +93,8 @@ OSXのクリップボードとtmuxを連携させるための設定
 * auto-fu
 * z
 * rbenv
-* MacVim
+* MacVim-KaoriYa
 
 #### 参考情報
 
-* [中島能和,zsh最強シェル入門,翔泳社](http://www.amazon.co.jp/zsh最強シェル入門-中島-能和/dp/479811815X)
+* [中島能和, zsh最強シェル入門, 翔泳社](http://www.amazon.co.jp/zsh最強シェル入門-中島-能和/dp/479811815X)
