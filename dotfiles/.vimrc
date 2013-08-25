@@ -70,9 +70,19 @@ nmap <C-l> :BufExplorer<CR>
 
 "" neocomplecache
 let g:neocomplcache_enable_at_startup=1
-imap <C-k> <Plug>(neocomplcache_snippets_expand)
-smap <C-k> <Plug><neocomplcache_snippets_expand)
-let g:neocomplcache_snippets_dir='~/Dropbox/succi0303/lib/vim_neocomplcache_snippets'
+
+"" neosnippet
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
 " unite
 let g:unite_enable_start_insert=1
