@@ -103,7 +103,11 @@ rbenv + ruby-buildを使用してRubyをインストールします。
 $ brew install rbenv
 $ brew install ruby-build
 $ brew upgrade ruby-build
+$ brew install openssl
 $ rbenv install 2.0.0-p0
+$ rbenv global 2.0.0-p0
+$ rbenv global rehash
+$ ruby -v
 ```
 
 ##### MacVim-KaoriYaをインストールする。
