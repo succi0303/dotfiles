@@ -17,16 +17,20 @@
 #### インストール
 
 ```bash
-git clone git://github.com/succi0303/dotfiles
-cd dotfiles
-rake install
+$ git clone git://github.com/succi0303/dotfiles
+$ cd dotfiles
+$ rake install
 ```
+
+ホームディレクトリ配下に設定ファイルへのシンボリックリンクを作成します。
 
 #### アンインストール
 
 ```bash
-rake clobber
+$ rake clobber
 ```
+
+ホームディレクトリ配下のシンボリックリンクを削除します。
 
 - - -
 
