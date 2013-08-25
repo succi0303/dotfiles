@@ -5,12 +5,11 @@ SOURCE_DIR = "#{Dir.pwd}/dotfiles/"
 TARGET_DIR = "#{ENV['HOME']}/"
 
 dot_files = []
-cd 'dotfiles' do
-  Dir.glob('.*') do |file|
-    next if file == '.'
-    next if file == '..'
-    dot_files << file
-  end
+Dir.glob('dotfiles/.*') do |path|
+  name = File.basename(path)
+  next if name == '.'
+  next if name == '..'
+  dot_files << name
 end
 
 # clobber
