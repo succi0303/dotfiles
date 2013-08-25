@@ -3,7 +3,9 @@
 ### 概要
 
 設定ファイル用のリポジトリです。
+
 zsh + tmux + vimが基本です。
+
 主な用途はRubyのプログラミングです。
 
 #### 利用環境
@@ -91,10 +93,17 @@ $ cd tmux-MacOSX-pasteboard
 $ make
 ```
 
-##### rbenvをインストールする。
+##### Rubyをインストールする。
+
+rbenv + ruby-buildを使用してRubyをインストールします。
+
+* [rbenvでRuby2.0をインストール+複数バージョンの切替 | prime factor](http://succi.jp/blog/?p=746)
 
 ```bash
 $ brew install rbenv
+$ brew install ruby-build
+$ brew upgrade ruby-build
+$ rbenv install 2.0.0-p0
 ```
 
 ##### MacVim-KaoriYaをインストールする。
