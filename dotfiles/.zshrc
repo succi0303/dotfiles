@@ -48,7 +48,7 @@ autoload -U colors
 colors
 autoload -U promptinit
 promptinit
-prompt clint
+prompt off
 
 # エイリアス
 alias mv='nocorrect mv'
