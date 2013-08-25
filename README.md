@@ -68,8 +68,9 @@ git clone git://github.com/hchbaw/auto-fu.zsh.git
 brew install z
 ```
 
-/usr/local/binにz.shへのシンボリックリンクを作成する
-z.shの実体は/usr/local/Cellar/z/バージョン番号/etc/profile.d/z.shに作成される。
+/usr/local/binにz.shへのシンボリックリンクを作成する。
+
+補足：z.shの実体は/usr/local/Cellar/z/バージョン番号/etc/profile.d/z.shに作成される。
 
 ##### tmuxをインストールする。
 
