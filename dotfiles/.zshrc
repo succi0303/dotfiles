@@ -72,7 +72,7 @@ alias lsa='ls -al'
 # 外部ツール設定
 ## z
 _Z_CMD=j
-source /usr/local/Cellar/z/1.4/etc/profile.d/z.sh
+source /usr/local/bin/z.sh
 precomd() {
   _z --add "$(pwd -P)"
 }
