@@ -182,6 +182,12 @@ OSXのクリップボードとtmuxを連携させるための設定
 
 * MacVim-KaoriYa
 
+#### 参考情報
+
+* [MBA-HACK: Vimの日本語入力を快適にする設定](http://mba-hack.blogspot.jp/2012/09/vim.html)
+
+InsertModeでEscを押したときにIMEをOFFにする設定は必須だと思います。(要KeyRemap4MacBook)
+
 - - -
 
 ### zsh
