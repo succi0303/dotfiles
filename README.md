@@ -78,7 +78,7 @@ $ brew install z
 $ brew install tmux
 ```
 
-#### tmux-MacOSX-pasteboardを設定する
+##### tmux-MacOSX-pasteboardを設定する
 
 ```bash
 $ cd ~
