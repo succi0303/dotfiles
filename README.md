@@ -14,6 +14,20 @@
 * vim
 * zsh
 
+#### インストール
+
+```bash
+git clone git://github.com/succi0303/dotfiles
+cd dotfiles
+rake install
+```
+
+#### アンインストール
+
+```bash
+rake clobber
+```
+
 - - -
 
 ### tmux
