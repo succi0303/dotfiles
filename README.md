@@ -78,6 +78,17 @@ $ brew install z
 $ brew install tmux
 ```
 
+#### tmux-MacOSX-pasteboardを設定する
+
+```bash
+$ cd ~
+$ mkdir .tmux
+$ cd .tmux
+$ git clone git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
+$ cd tmux-MacOSX-pasteboard
+$ make
+```
+
 ##### rbenvをインストールする。
 
 ```bash
