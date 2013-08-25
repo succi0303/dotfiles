@@ -78,8 +78,8 @@ precomd() {
 }
 
 ## auto-fu
-if [ -f ~/.zsh/auto-fu.zsh ]; then
-  source ~/.zsh/auto-fu.zsh
+if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
+  source ~/.zsh/auto-fu.zsh/auto-fu.zsh
   function zle-line-init() {
     auto-fu-init
   }
