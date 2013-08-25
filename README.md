@@ -17,35 +17,35 @@
 
 #### インストール
 
-最低限の初期設定の手順です。
+初期設定の手順です。
 
-* Xcodeをインストールする。
+##### Xcodeをインストールする。
 
 App StoreでXcodeを選択し、インストールする。
 
-* Command Line Tools for Xcodeをインストールする。
+##### Command Line Tools for Xcodeをインストールする。
 
 Xcodeを起動、環境設定-Downloadsタブ-ComponentsからCommand Line Toolsのinstallを実行する。
 
-* Homebrewをインストールする。
+##### Homebrewをインストールする。
 
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.github.com/mxc./homebrew/go)"
 ```
 
-* gitをインストールする。
+##### gitをインストールする。
 
 ```bash
 $ brew install git
 ```
 
-* zshをインストールする。
+##### zshをインストールする。
 
 ```bash
 $ brew install zsh
 ```
 
-* デフォルトシェルをzshに変更する
+##### デフォルトシェルをzshに変更する
 
 ```bash
 $ chsh -l /bin/zsh
@@ -53,7 +53,7 @@ $ chsh -l /bin/zsh
 
 上記コマンドを実行後、ターミナルを再起動する。
 
-* auto-fuをインストールする
+##### auto-fuをインストールする
 
 ```bash
 cd
@@ -62,7 +62,7 @@ cd .zsh
 git clone git://github.com/hchbaw/auto-fu.zsh.git
 ```
 
-* z.shをインストールする。
+##### z.shをインストールする。
 
 ```bash
 brew install z
@@ -71,23 +71,23 @@ brew install z
 /usr/local/binにz.shへのシンボリックリンクを作成する
 z.shの実体は/usr/local/Cellar/z/バージョン番号/etc/profile.d/z.shに作成される。
 
-* tmuxをインストールする。
+##### tmuxをインストールする。
 
 ```bash
 $ brew install tmux
 ```
 
-* rbenvをインストールする。
+##### rbenvをインストールする。
 
 ```bash
 $ brew install rbenv
 ```
 
-* MacVim-KaoriYaをインストールする。
+##### MacVim-KaoriYaをインストールする。
 
 [macvim-kaoriya - MacVim KaoriYa - Google Project Hosting](http://code.google.com/p/macvim-kaoriya/)からdmgをダウンロード。MacVim.appをApplicationディレクトリに配置する。
 
-* VimのNeoBundleを設定する
+##### VimのNeoBundleを設定する
 
 ```bash
 cd
@@ -95,7 +95,7 @@ mkdir -p .vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
-* dotfilesをインストールする。
+##### dotfilesをインストールする。
 
 ```bash
 $ git clone git://github.com/succi0303/dotfiles
