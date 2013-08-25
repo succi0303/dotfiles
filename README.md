@@ -56,16 +56,16 @@ $ chsh -l /bin/zsh
 ##### auto-fuをインストールする
 
 ```bash
-cd ~
-mkdir .zsh
-cd .zsh
-git clone git://github.com/hchbaw/auto-fu.zsh.git
+$ cd ~
+$ mkdir .zsh
+$ cd .zsh
+$ git clone git://github.com/hchbaw/auto-fu.zsh.git
 ```
 
 ##### z.shをインストールする。
 
 ```bash
-brew install z
+$ brew install z
 ```
 
 /usr/local/binにz.shへのシンボリックリンクを作成する。
