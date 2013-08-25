@@ -46,9 +46,18 @@ DIRSTACKSIZE=20
 # プロンプトの設定
 autoload -U colors
 colors
-autoload -U promptinit
-promptinit
-prompt off
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '%b'
+zstyle ':vcs_info:*' actionformats '%b|%a'
+precmd () {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [ -n "$vcs_info_msg_0_" ] && psvar[1]="$vcs_info_msg_0_"
+}
+PROMPT="%F{240}zsh>%f "
+RPROMPT="%F{063}%1(v|%1v|)%f %F{240}%~%f"
+setopt transient_rprompt
 
 # エイリアス
 alias mv='nocorrect mv'
