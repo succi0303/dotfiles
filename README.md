@@ -56,7 +56,7 @@ $ chsh -l /bin/zsh
 ##### auto-fuをインストールする
 
 ```bash
-cd
+cd ~
 mkdir .zsh
 cd .zsh
 git clone git://github.com/hchbaw/auto-fu.zsh.git
@@ -91,9 +91,9 @@ $ brew install rbenv
 ##### VimのNeoBundleを設定する
 
 ```bash
-cd
-mkdir -p .vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+$ cd ~
+$ mkdir -p .vim/bundle
+$ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
 ##### dotfilesをインストールする。
