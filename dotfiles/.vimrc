@@ -12,6 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
@@ -83,6 +84,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " unite
 let g:unite_enable_start_insert=1
