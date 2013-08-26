@@ -110,6 +110,12 @@ $ rbenv rehash
 $ ruby -v
 ```
 
+##### blueclothをインストールする。
+
+```bash
+$ gem install bluecloth
+```
+
 ##### MacVim-KaoriYaをインストールする。
 
 [macvim-kaoriya - MacVim KaoriYa - Google Project Hosting](http://code.google.com/p/macvim-kaoriya/)からdmgをダウンロード。MacVim.appをApplicationディレクトリに配置する。
@@ -185,6 +191,7 @@ OSXのクリップボードとtmuxを連携させるための設定
 #### 外部ツール
 
 * MacVim-KaoriYa
+* bluecloth
 
 #### 参考情報
 
