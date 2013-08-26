@@ -106,7 +106,7 @@ $ brew upgrade ruby-build
 $ brew install openssl
 $ rbenv install 2.0.0-p0
 $ rbenv global 2.0.0-p0
-$ rbenv global rehash
+$ rbenv rehash
 $ ruby -v
 ```
 
