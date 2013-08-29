@@ -21,7 +21,11 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \ 'mac' : 'make -f make_mac.mak'
+      \ },
+      \}
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
@@ -29,6 +33,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'yuratomo/gmail.vim'
 
 NeoBundle 'buftabs'
 NeoBundle 'endwise.vim'
@@ -108,3 +113,6 @@ let g:quickrun_config['markdown'] = {
                         \ 'command' : 'bluecloth',
                         \ 'exec' : '%c -f %s'
                         \ }
+
+" gmail.vim
+source ~/.vimrc_gmail
