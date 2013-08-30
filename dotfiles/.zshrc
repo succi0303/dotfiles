@@ -23,6 +23,7 @@ setopt correctall auto_cd recexact longlistjobs
 setopt auto_pushd pushdminus extended_glob
 setopt list_packed list_types
 setopt hist_no_store hist_ignore_dups hist_reduce_blanks hist_ignore_space inc_append_history share_history
+setopt no_beep
 
 # zshモジュールのロード
 zmodload -a zsh/stat stat
