@@ -38,6 +38,17 @@ bindkey -e
 autoload -U compinit
 compinit
 
+# 補完関数の表示を強化する
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+zstyle ':completion:*:messages' format '%F{YELLOW}%d'$DEFAULT
+zstyle ':completion:*:warnings' format '%F{RED}No matches for:''%F{YELLOW} %d'$DEFAULT
+zstyle ':completion:*:descriptions' format '%F{YELLOW}completing %B%d%b'$DEFAULT
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:descriptions' format '%F{yellow}Completing %B%d%b%f'$DEFAULT
+# マッチ種別を別々に表示
+zstyle ':completion:*' group-name ''
+
 # 履歴
 HISTSIZE=2000
 SAVEHIST=1000000
@@ -59,6 +70,9 @@ precmd () {
 PROMPT="%F{240}zsh>%f "
 RPROMPT="%F{063}%1(v|%1v|)%f %F{240}%~%f"
 setopt transient_rprompt
+
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # エイリアス
 alias rm='rm -i'
