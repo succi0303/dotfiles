@@ -61,6 +61,9 @@ RPROMPT="%F{063}%1(v|%1v|)%f %F{240}%~%f"
 setopt transient_rprompt
 
 # エイリアス
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
