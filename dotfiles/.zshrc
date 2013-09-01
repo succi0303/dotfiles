@@ -87,6 +87,8 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lsa='ls -al'
 
+alias be='bundle exec'
+
 # 外部ツール設定
 ## z
 _Z_CMD=j
