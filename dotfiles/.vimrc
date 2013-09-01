@@ -58,6 +58,12 @@ set number
 set showmatch
 set incsearch
 
+" バッファ移動用のキーマッピング
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
 " 検索結果のハイライトをEsc連打でクリア
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
