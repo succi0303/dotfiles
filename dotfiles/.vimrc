@@ -10,6 +10,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'honza/vim-snippets'
