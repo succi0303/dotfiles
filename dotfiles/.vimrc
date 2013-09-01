@@ -73,13 +73,10 @@ colorscheme railscasts
 
 " プラグイン
 
-"" bufexplorer
-nmap <C-l> :BufExplorer<CR>
-
-"" neocomplecache
+" neocomplecache
 let g:neocomplcache_enable_at_startup=1
 
-"" neosnippet
+" neosnippet
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
