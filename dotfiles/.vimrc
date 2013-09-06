@@ -40,8 +40,6 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'yuratomo/gmail.vim'
 NeoBundle 'buftabs'
 NeoBundle 'endwise.vim'
-NeoBundle 'FuzzyFinder'
-NeoBundle 'L9'
 
 filetype plugin indent on
 NeoBundleCheck
