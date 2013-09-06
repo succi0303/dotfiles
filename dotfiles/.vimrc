@@ -13,8 +13,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -120,3 +122,10 @@ let g:quickrun_config['markdown'] = {
 
 " gmail.vim
 source ~/.vimrc_gmail
+
+" memolist.vim
+let g:memolist_path="~/Dropbox/succi0303/lib/memolist"
+nnoremap ,mc :MemoNew<CR>
+nnoremap ,ml :MemoList<CR>
+nnoremap ,mg :MemoGrep<CR>
+nnoremap ,mf :exe "CtrlP" g:memolist_path<CR>
