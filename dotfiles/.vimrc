@@ -18,6 +18,8 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Shougo/neocomplcache'
@@ -131,3 +133,7 @@ nnoremap ,mc :MemoNew<CR>
 nnoremap ,ml :MemoList<CR>
 nnoremap ,mg :MemoGrep<CR>
 nnoremap ,mf :exe "CtrlP" g:memolist_path<CR>
+
+" gist.vim
+let g:gist_show_privates=1
+let g:gist_post_private=1
