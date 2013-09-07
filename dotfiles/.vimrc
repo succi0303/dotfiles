@@ -15,10 +15,10 @@ NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -75,7 +75,8 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme railscasts
+colorscheme jellybeans
+let g:jellybeans_use_lowcolor_black=0
 
 " プラグイン
 
