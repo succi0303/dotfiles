@@ -122,7 +122,10 @@ let g:quickrun_config['markdown'] = {
 source ~/.vimrc_gmail
 
 " memolist.vim
+let g:memolist_memo_suffix="markdown"
 let g:memolist_path="~/Dropbox/succi0303/lib/memolist"
+let g:memolist_prompt_tags=1
+let g:memolist_prompt_categories=1
 nnoremap ,mc :MemoNew<CR>
 nnoremap ,ml :MemoList<CR>
 nnoremap ,mg :MemoGrep<CR>
