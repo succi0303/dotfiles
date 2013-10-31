@@ -19,7 +19,7 @@ end
 
 task :default => :install
 
-desc 'Install dotfiles'
+desc 'Install dotfiles.'
 task :install do
   dot_files.each do |file_name|
     if File.exists?(TARGET_DIR + file_name)
