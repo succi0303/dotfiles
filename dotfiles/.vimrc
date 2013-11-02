@@ -34,6 +34,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
