@@ -52,7 +52,7 @@ $ brew install zsh
 ##### デフォルトシェルをzshに変更する
 
 ```bash
-$ chsh -l /bin/zsh
+$ chsh -s /bin/zsh
 ```
 
 上記コマンドを実行後、ターミナルを再起動する。
