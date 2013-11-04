@@ -122,9 +122,6 @@ let g:quickrun_config['markdown'] = {
                         \ 'exec' : '%c -f %s'
                         \ }
 
-" gmail.vim
-source ~/.vimrc_gmail
-
 " memolist.vim
 let g:memolist_memo_suffix="markdown"
 let g:memolist_path="~/Dropbox/succi0303/lib/memolist"
