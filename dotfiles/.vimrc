@@ -10,6 +10,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
@@ -141,3 +142,6 @@ nnoremap ,bp :BlogPreview publish<CR>
 " gist.vim
 let g:gist_show_privates=1
 let g:gist_post_private=1
+
+" bufexplorer
+nnoremap <C-l> :BufExplorer<CR>
