@@ -22,6 +22,7 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'pentie/VimRepress'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
@@ -131,6 +132,11 @@ nnoremap ,mc :MemoNew<CR>
 nnoremap ,ml :MemoList<CR>
 nnoremap ,mg :MemoGrep<CR>
 nnoremap ,mf :exe "CtrlP" g:memolist_path<CR>
+
+" vimrepress
+nnoremap ,bc :BlogNew<CR>
+nnoremap ,bl :BlogList<CR>
+nnoremap ,bp :BlogPreview publish<CR>
 
 " gist.vim
 let g:gist_show_privates=1
