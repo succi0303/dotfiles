@@ -144,7 +144,7 @@ export PATH="$HOME/.rbenv/bin":$PATH
 eval "$(rbenv init -)"
 
 ## grep
-GREP_OPTIONS="--color=always";export GREP_OPTIONS
+# GREP_OPTIONS="--color=always";export GREP_OPTIONS
 
 ## MacVim
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
