@@ -10,15 +10,18 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -37,11 +40,13 @@ NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-visualstar'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vimoutliner/vimoutliner'
 NeoBundle 'yuratomo/gmail.vim'
 NeoBundle 'buftabs'
 NeoBundle 'endwise.vim'
@@ -80,8 +85,8 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme jellybeans
-let g:jellybeans_use_lowcolor_black=0
+colorscheme lucius
+LuciusBlackHighContrast
 
 " プラグイン
 
@@ -145,3 +150,4 @@ let g:gist_post_private=1
 
 " bufexplorer
 nnoremap <C-l> :BufExplorer<CR>
+syntax on
