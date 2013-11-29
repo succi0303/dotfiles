@@ -10,7 +10,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
@@ -21,7 +21,6 @@ NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -151,3 +150,13 @@ let g:gist_post_private=1
 " bufexplorer
 nnoremap <C-l> :BufExplorer<CR>
 syntax on
+
+" airline
+let g:airline_theme='luna'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+" powerline symbols
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
