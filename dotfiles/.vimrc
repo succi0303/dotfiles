@@ -16,6 +16,7 @@ NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'jpo/vim-railscasts-theme'
@@ -24,7 +25,6 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pentie/VimRepress'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -45,6 +45,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-scripts/VOoM'
 NeoBundle 'vimoutliner/vimoutliner'
 NeoBundle 'yuratomo/gmail.vim'
 NeoBundle 'buftabs'
@@ -110,11 +111,6 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 let g:unite_enable_start_insert=1
 nmap <C-o> :Unite line<CR>
 nmap <C-u> :Unite file_mru buffer file<CR>
-
-" indent-guides
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_color_change_percent=30
-let g:indent_guides_guide_size=1
 
 " open-browser
 let g:netw_nogx=1
