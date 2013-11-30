@@ -16,7 +16,6 @@ NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/JpFormat.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
-NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'honza/vim-snippets'
@@ -125,16 +124,6 @@ let g:quickrun_config['markdown'] = {
                         \ 'command' : 'bluecloth',
                         \ 'exec' : '%c -f %s'
                         \ }
-
-" memolist.vim
-let g:memolist_memo_suffix="markdown"
-let g:memolist_path="~/Dropbox/succi0303/lib/memolist"
-let g:memolist_prompt_tags=1
-let g:memolist_prompt_categories=1
-nnoremap ,mc :MemoNew<CR>
-nnoremap ,ml :MemoList<CR>
-nnoremap ,mg :MemoGrep<CR>
-nnoremap ,mf :exe "CtrlP" g:memolist_path<CR>
 
 " vimrepress
 nnoremap ,bc :BlogNew<CR>
