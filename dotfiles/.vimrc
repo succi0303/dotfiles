@@ -17,6 +17,7 @@ NeoBundle 'fuenor/JpFormat.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'jonathanfilip/vim-lucius'
@@ -160,3 +161,6 @@ let g:airline_symbols.linenr = ''
 
 " JpFormat
 set formatexpr=jpfmt#formatexpr()
+
+" Gitv
+autocmd FileType git :setlocal foldlevel=99
