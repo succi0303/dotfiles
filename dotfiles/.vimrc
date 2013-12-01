@@ -116,6 +116,10 @@ let g:netw_nogx=1
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+" vim-easymothon
+let g:EasyMotion_leader_key=";"
+let g:EasyMotion_grouping=1
+
 " vim-quickrun
 let g:quickrun_config = {}
 let g:quickrun_config['markdown'] = {
