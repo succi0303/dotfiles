@@ -61,6 +61,7 @@ set cursorline
 set number
 set showmatch
 set incsearch
+set display+=lastline
 
 " バッファ移動用のキーマッピング
 nnoremap <silent> [b :bprevious<CR>
