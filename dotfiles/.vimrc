@@ -48,7 +48,6 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/VOoM'
 NeoBundle 'vimoutliner/vimoutliner'
-NeoBundle 'yuratomo/gmail.vim'
 NeoBundle 'buftabs'
 NeoBundle 'endwise.vim'
 
