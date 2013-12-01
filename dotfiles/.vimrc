@@ -11,7 +11,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'bling/vim-airline'
-NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/JpFormat.vim'
 NeoBundle 'fuenor/qfixgrep'
@@ -40,6 +39,7 @@ NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-visualstar'
+NeoBundle 'troydm/easybuffer.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
@@ -133,8 +133,8 @@ nnoremap ,bp :BlogPreview publish<CR>
 let g:gist_show_privates=1
 let g:gist_post_private=1
 
-" bufexplorer
-nnoremap <C-l> :BufExplorer<CR>
+" EasyBuffer.vim
+nnoremap <C-l> :EasyBuffer<CR>
 syntax on
 
 " airline
