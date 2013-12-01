@@ -105,7 +105,7 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " unite
 let g:unite_enable_start_insert=1
-nmap <C-o> :Unite line<CR>
+nmap <C-o> :Unite line/fast<CR>
 nmap <C-u> :Unite file_mru buffer file<CR>
 
 " open-browser
