@@ -58,19 +58,6 @@ DIRSTACKSIZE=20
 # プロンプトの設定
 autoload -U colors
 colors
-
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '%b'
-zstyle ':vcs_info:*' actionformats '%b|%a'
-precmd () {
-  psvar=()
-  LANG=en_US.UTF-8 vcs_info
-  [ -n "$vcs_info_msg_0_" ] && psvar[1]="$vcs_info_msg_0_"
-}
-PROMPT="%F{240}zsh>%f "
-RPROMPT="%F{063}%1(v|%1v|)%f %F{240}%~%f"
-setopt transient_rprompt
-
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
@@ -156,3 +143,17 @@ export PATH="$HOME/scripts":$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Powerline-shell
+function powerline_precmd() {
+  export PS1="$(~/.zsh/Powerline-shell/powerline-shell.py --mode flat $? --shell zsh 2> /dev/null)"
+}
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+install_powerline_precmd
