@@ -52,8 +52,8 @@ NeoBundleCheck
 set encoding=UTF-8
 set fileencoding=UTF-8
 set termencoding=UTF-8
-set backupdir=~/Dropbox/succi0303/lib/vim_backup
-set directory=~/Dropbox/succi0303/lib/vim_backup
+set backupdir=~/.vim_backup
+set directory=~/.vim_backup
 set expandtab
 set smarttab
 set autoindent
