@@ -82,15 +82,10 @@ $ brew install z
 $ brew install tmux
 ```
 
-##### tmux-MacOSX-pasteboardを設定する
+OSXのクリップボードとコピーを共有するために"reattach-to-user-namespace"をインストールする
 
 ```bash
-$ cd ~
-$ mkdir .tmux
-$ cd .tmux
-$ git clone git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
-$ cd tmux-MacOSX-pasteboard
-$ make
+$ brew install reattach-to-user-namespace
 ```
 
 ##### Rubyをインストールする。
