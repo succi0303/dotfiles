@@ -1,55 +1,51 @@
 # dotfiles
 
-### 概要
-
 設定ファイル用のリポジトリです。
 
-zsh + tmux + vimが基本です。
+### 利用環境
 
-主な用途はRubyのプログラミングです。
+* OSX 10.9.x on MacBookPro Retina '13
 
-#### 利用環境
+### 主な利用アプリケーション
 
-* OSX 10.8.x on MacBookAir'11
-
-#### 対象アプリケーション
-
-* git
+* zsh
 * tmux
 * vim
-* zsh
+* git
+* slate
+* Vimperator(on Firefox)
 
-#### インストール
+### 初期設定の手順
 
 初期設定の手順です。
 
-##### Xcodeをインストールする。
+#### Xcodeのインストール
 
-App StoreでXcodeを選択し、インストールする。
+App StoreでXcodeを選択、手順にしたがってインストールする。
 
-##### Command Line Tools for Xcodeをインストールする。
+#### Command Line Tools for Xcodeのインストール
 
 Xcodeを起動、環境設定-Downloadsタブ-ComponentsからCommand Line Toolsのinstallを実行する。
 
-##### Homebrewをインストールする。
+#### Homebrewのインストール
 
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.github.com/mxc./homebrew/go)"
 ```
 
-##### gitをインストールする。
+#### gitのインストール
 
 ```bash
 $ brew install git
 ```
 
-##### zshをインストールする。
+#### zshのインストール
 
 ```bash
 $ brew install zsh
 ```
 
-##### デフォルトシェルをzshに変更する
+デフォルトシェルをzshに変更する
 
 ```bash
 $ chsh -s /bin/zsh
@@ -57,7 +53,7 @@ $ chsh -s /bin/zsh
 
 上記コマンドを実行後、ターミナルを再起動する。
 
-##### auto-fuをインストールする
+#### auto-fuのインストール
 
 ```bash
 $ cd ~
@@ -66,17 +62,27 @@ $ cd .zsh
 $ git clone git://github.com/hchbaw/auto-fu.zsh.git
 ```
 
-##### z.shをインストールする。
+#### z.shのインストール
 
 ```bash
 $ brew install z
 ```
 
 /usr/local/binにz.shへのシンボリックリンクを作成する。
-
 補足：z.shの実体は/usr/local/Cellar/z/バージョン番号/etc/profile.d/z.shに作成される。
 
-##### tmuxをインストールする。
+#### Powerline-shellのインストール
+
+```bash
+$ cd .zsh
+$ git clone http://github.com/milkbikis/powerline-shell.git
+$ cd powerline-shell
+$ cp config.py.dist config.py
+# config.pyを必要に応じて編集
+$ ./install.py
+```
+
+#### tmuxのインストール
 
 ```bash
 $ brew install tmux
@@ -88,7 +94,7 @@ OSXのクリップボードとコピーを共有するために"reattach-to-user
 $ brew install reattach-to-user-namespace
 ```
 
-##### Rubyをインストールする。
+#### Rubyのインストール
 
 rbenv + ruby-buildを使用してRubyをインストールします。
 
@@ -105,17 +111,17 @@ $ rbenv rehash
 $ ruby -v
 ```
 
-##### blueclothをインストールする。
+#### blueclothのインストール
 
 ```bash
 $ gem install bluecloth
 ```
 
-##### MacVim-KaoriYaをインストールする。
+#### Vimのインストール
 
 [macvim-kaoriya - MacVim KaoriYa - Google Project Hosting](http://code.google.com/p/macvim-kaoriya/)からdmgをダウンロード。MacVim.appをApplicationディレクトリに配置する。
 
-##### VimのNeoBundleを設定する
+#### VimのNeoBundleを設定
 
 ```bash
 $ cd ~
@@ -123,7 +129,7 @@ $ mkdir -p .vim/bundle
 $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
-##### dotfilesをインストールする。
+#### 設定ファイルのインストール
 
 ```bash
 $ git clone git://github.com/succi0303/dotfiles
@@ -143,73 +149,14 @@ $ rake clobber
 
 - - -
 
-### git
-
-#### 設定ファイル
-
-* .gitconfig
-* .gitignore
-
 #### 参考情報
 
 * [川野辺正博, アリスとボブのGit入門レッスン, 秀和システム](http://www.amazon.co.jp/アリスとボブのGit入門レッスン-川野辺-正博/dp/4798035009)
 
 aliasの"tree"は「アリスとボブのGit入門レッスン」に記載されていたものをそのまま使用しています。
 
-- - -
-
-### tmux
-
-#### 設定ファイル
-
-* .tmux.conf
-
-#### 外部ツール
-
-* tmux-MacOSX-pasteboard
-
-#### 参考情報
-
-* [ChirsJohnsen/tmux-MacOSX-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)
-
-OSXのクリップボードとtmuxを連携させるための設定
-
-- - -
-
-### vim
-
-#### 設定ファイル
-
-* .vimrc
-* .gvimrc
-
-#### 外部ツール
-
-* MacVim-KaoriYa
-* bluecloth
-
-#### 参考情報
-
 * [MBA-HACK: Vimの日本語入力を快適にする設定](http://mba-hack.blogspot.jp/2012/09/vim.html)
 
 InsertModeでEscを押したときにIMEをOFFにする設定は必須だと思います。(要KeyRemap4MacBook)
-
-- - -
-
-### zsh
-
-#### 設定ファイル
-
-* .zshrc
-* .zshenv
-
-#### 外部ツール
-
-* auto-fu
-* z
-* rbenv
-* MacVim-KaoriYa
-
-#### 参考情報
 
 * [中島能和, zsh最強シェル入門, 翔泳社](http://www.amazon.co.jp/zsh最強シェル入門-中島-能和/dp/479811815X)
