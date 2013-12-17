@@ -44,7 +44,6 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/VOoM'
 NeoBundle 'vimoutliner/vimoutliner'
 NeoBundle 'buftabs'
-NeoBundle 'endwise.vim'
 
 filetype plugin indent on
 NeoBundleCheck
