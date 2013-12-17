@@ -11,6 +11,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'bling/vim-airline'
+NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/JpFormat.vim'
 NeoBundle 'fuenor/qfixgrep'
@@ -18,6 +19,7 @@ NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'pentie/VimRepress'
@@ -151,3 +153,6 @@ set formatexpr=jpfmt#formatexpr()
 
 " Gitv
 autocmd FileType git :setlocal foldlevel=99
+
+" vim-smartinput-endwise
+call smartinput_endwise#define_default_rules()
