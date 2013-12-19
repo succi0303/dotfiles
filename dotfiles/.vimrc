@@ -24,6 +24,7 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'pentie/VimRepress'
@@ -86,8 +87,7 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme lucius
-LuciusBlackHighContrast
+colorscheme jellybeans
 
 " プラグイン
 
