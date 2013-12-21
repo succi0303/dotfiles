@@ -47,6 +47,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'ujihisa/neco-look'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/VOoM'
 NeoBundle 'vimoutliner/vimoutliner'
@@ -95,6 +96,10 @@ colorscheme jellybeans
 
 " neocomplecache
 let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_smart_case=1
+let g:neocomplcache_enable_underbar_completion=1
+let g:neocomplcache_min_syntax_length=3
+let g:neocomplcache_max_list=20
 
 " neosnippet
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
