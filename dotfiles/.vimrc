@@ -170,4 +170,5 @@ autocmd FileType git :setlocal foldlevel=99
 call smartinput_endwise#define_default_rules()
 
 " syntastic
+let g:syntastic_auto_loc_list=1
 
