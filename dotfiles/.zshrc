@@ -127,8 +127,10 @@ if ! is_screen_or_tmux_running && shell_has_started_interactively; then
 fi
 
 ## rbenv
-export PATH="$HOME/.rbenv/bin":$PATH
-eval "$(rbenv init -)"
+if [ -d ${HOME}/.rbenv ] ; then
+  export PATH="$HOME/.rbenv/bin":$PATH
+  eval "$(rbenv init -)"
+fi
 
 ## grep
 # GREP_OPTIONS="--color=always";export GREP_OPTIONS

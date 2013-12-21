@@ -28,6 +28,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'pentie/VimRepress'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
@@ -167,3 +168,6 @@ autocmd FileType git :setlocal foldlevel=99
 
 " vim-smartinput-endwise
 call smartinput_endwise#define_default_rules()
+
+" syntastic
+
