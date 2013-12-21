@@ -64,6 +64,8 @@ set expandtab
 set smarttab
 set autoindent
 set tabstop=2 shiftwidth=2 softtabstop=2
+set hidden
+set showcmd
 set cursorline
 set number
 set showmatch
@@ -80,7 +82,7 @@ nnoremap <silent> ]B :blast<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " コマンドラインモードの補完を有効
-set wildmode=longest:full,full
+set wildmode=list,full
 
 " grep検索設定
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
