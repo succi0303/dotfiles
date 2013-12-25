@@ -53,6 +53,7 @@ NeoBundle 'ujihisa/neco-look'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/VOoM'
 NeoBundle 'vimoutliner/vimoutliner'
+NeoBundle 'vimwiki/vimwiki'
 NeoBundle 'buftabs'
 
 filetype plugin indent on
@@ -171,5 +172,13 @@ autocmd FileType git :setlocal foldlevel=99
 call smartinput_endwise#define_default_rules()
 
 " syntastic
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" changelog
+let g:changelog_dateformat='%Y-%m-%d'
+let g:changelog_username='succi0303 <succi0303@gmail.com>'
+nnoremap <Leader><Leader>o :new ~/changelog/changelog<CR>
