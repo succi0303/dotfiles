@@ -76,6 +76,9 @@ alias lsa='ls -al'
 
 alias be='bundle exec'
 
+alias bnew='bookmark new'
+alias bls='bookmark ls'
+
 # 外部ツール設定
 ## z
 _Z_CMD=j
