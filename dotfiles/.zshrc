@@ -78,6 +78,7 @@ alias be='bundle exec'
 
 alias bnew='bookmark new'
 alias bls='bookmark ls'
+alias bed='bookmark edit'
 
 # 外部ツール設定
 ## z
