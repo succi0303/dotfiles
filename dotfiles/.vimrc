@@ -19,6 +19,7 @@ NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kien/ctrlp.vim'
@@ -29,6 +30,7 @@ NeoBundle 'noahfrederick/vim-hemisu'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'pentie/VimRepress'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -75,6 +77,9 @@ set number
 set showmatch
 set incsearch
 set display+=lastline
+
+" crontab編集用
+set backupskip=/tmp/*,/private/tmp/*
 
 " バッファ移動用のキーマッピング
 nnoremap <silent> [b :bprevious<CR>
@@ -182,3 +187,12 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 let g:changelog_dateformat='%Y-%m-%d'
 let g:changelog_username='succi0303 <succi0303@gmail.com>'
 nnoremap <Leader><Leader>o :new ~/changelog/changelog<CR>
+
+" NERD-Tree
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMapActivateNode="<CR>"
+let file_name = expand("%:p")
+nnoremap <C-e> :NERDTreeToggle<CR>
+if has('vim_starting') &&  file_name == ""
+  autocmd VimEnter * execute 'NERDTree ./'
+endif
