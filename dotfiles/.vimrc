@@ -68,6 +68,7 @@ set backupdir=~/.vim_backup
 set directory=~/.vim_backup
 set expandtab
 set smarttab
+set backspace=indent,eol,start
 set autoindent
 set tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
@@ -77,6 +78,7 @@ set number
 set showmatch
 set incsearch
 set display+=lastline
+set laststatus=2
 
 " crontab編集用
 set backupskip=/tmp/*,/private/tmp/*
@@ -163,9 +165,12 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 " powerline symbols
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = ''
+let g:airline_symbols.branch = '(B)'
+let g:airline_symbols.readonly = '(R)'
+let g:airline_symbols.linenr = '(L)'
 
 " JpFormat
 set formatexpr=jpfmt#formatexpr()

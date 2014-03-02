@@ -25,6 +25,7 @@ install postgresql
 install reattach-to-user-namespace
 install sqlite
 install tmux
+install vim --with-lua
 install w3m
 install wget
 install z

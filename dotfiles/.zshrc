@@ -139,10 +139,10 @@ fi
 ## grep
 # GREP_OPTIONS="--color=always";export GREP_OPTIONS
 
-## MacVim
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim'
+## vim
+export EDITOR="/usr/local/bin/vim"
+alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
 
 ## my script
 export PATH="$HOME/scripts":$PATH
