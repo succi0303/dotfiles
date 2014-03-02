@@ -12,7 +12,7 @@ tap homebrew/versions
 tap phinze/homebrew-cask
 install brew-cask
 
-# install brew-package
+# install brew-packages
 install curl
 install git
 install git-flow
@@ -20,7 +20,7 @@ install heroku-toolbelt
 install lynx
 install mongodb
 install mysql
-install notmuch
+install newsbeuter
 install postgresql
 install reattach-to-user-namespace
 install sqlite
@@ -31,13 +31,7 @@ install wget
 install z
 install zsh
 
-# install Ruby
-install openssl
-install rbenv
-install readline
-install ruby-build
-
-# install cask-package
+# install cask-packages
 cask install appcleaner
 cask install caffeine
 cask install coteditor
@@ -55,6 +49,24 @@ cask install quicksilver
 cask install vagrant
 cask install virtualbox
 cask install vlc
+
+# install Ruby
+install openssl
+install rbenv
+install readline
+install ruby-build
+
+# install mail environment
+# http://stevelosh.com/blog/2012/10/the-homely-mutt/
+install msmtp
+install mutt
+install notmuch
+install urlview
+
+# for Nokogiri
+install libxml2
+install libxslt
+link libxml2 libxslt
 
 # install R
 tap homebrew/science
