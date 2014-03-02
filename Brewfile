@@ -75,5 +75,5 @@ install r
 cask install xquartz
 cask install rstudio
 
-# remove autdated versions from the cellar
+# remove outdated versions from the cellar
 cleanup
