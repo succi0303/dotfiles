@@ -22,7 +22,7 @@ set focuscontent
 set ignorecase
 
 " GUI要素の表示・非表示
-set gui=noaddons,nobookmarks,menu,navigation,tabs
+set gui=noaddons,nobookmarks,menu,nonavigation,tabs
 set noscrollbars
 
 " カラースキーマ

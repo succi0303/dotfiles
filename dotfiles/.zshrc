@@ -163,3 +163,13 @@ function install_powerline_precmd() {
   precmd_functions+=(powerline_precmd)
 }
 install_powerline_precmd
+
+### PostgresSQL
+PATH="/Applications/Postgres93.app/Contents/MacOS/bin/:$PATH"
+
+### Git
+DYLD_LIBRARY_PATH="/Applications/redmine-2.4.2-0/common/lib/libiconv.2.dylib"
+
+### Apache Jena
+export JENAROOT="/Users/succi0303/apache-jena-2.11.1/"
+export PATH=$PATH:$JENAROOT/bin

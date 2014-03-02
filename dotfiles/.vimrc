@@ -193,6 +193,3 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeMapActivateNode="<CR>"
 let file_name = expand("%:p")
 nnoremap <C-e> :NERDTreeToggle<CR>
-if has('vim_starting') &&  file_name == ""
-  autocmd VimEnter * execute 'NERDTree ./'
-endif
