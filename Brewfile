@@ -22,6 +22,7 @@ install mongodb
 install mysql
 install newsbeuter
 install postgresql
+install python3
 install reattach-to-user-namespace
 install sqlite
 install tmux
