@@ -25,6 +25,7 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mrtazz/simplenote.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'noahfrederick/vim-hemisu'
 NeoBundle 'othree/html5.vim'
@@ -230,3 +231,6 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeMapActivateNode="<CR>"
 let file_name = expand("%:p")
 nnoremap <C-e> :NERDTreeToggle<CR>
+
+" simplenote.vim
+source ~/.simplenoterc
