@@ -76,10 +76,10 @@ set hidden
 set showcmd
 set cursorline
 set number
+set laststatus=2
 set showmatch
 set incsearch
 set display+=lastline
-set laststatus=2
 
 " crontab編集用
 set backupskip=/tmp/*,/private/tmp/*

@@ -21,6 +21,7 @@ install lynx
 install mongodb
 install mysql
 install newsbeuter
+install node
 install postgresql
 install python3
 install reattach-to-user-namespace
@@ -39,7 +40,6 @@ cask install coteditor
 cask install dropbox
 cask install firefox
 cask install flash
-cask install geektool
 cask install google-chrome
 cask install growlnotify
 cask install handbrake
