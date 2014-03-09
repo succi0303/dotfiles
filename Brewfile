@@ -27,6 +27,7 @@ install python3
 install reattach-to-user-namespace
 install sqlite
 install tmux
+install tree
 install vim --with-lua
 install w3m
 install wget
