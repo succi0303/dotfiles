@@ -35,6 +35,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc', {
@@ -216,15 +217,6 @@ call smartinput_endwise#define_default_rules()
 
 " syntastic
 let g:syntastic_auto_loc_list=0
-
-" vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-      \ 'syntax': 'markdown', 'ext': '.md'}]
-
-" changelog
-let g:changelog_dateformat='%Y-%m-%d'
-let g:changelog_username='succi0303 <succi0303@gmail.com>'
-nnoremap <Leader><Leader>o :new ~/changelog/changelog<CR>
 
 " NERD-Tree
 let g:NERDTreeShowHidden=1
