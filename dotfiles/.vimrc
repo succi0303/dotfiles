@@ -81,6 +81,8 @@ set laststatus=2
 set showmatch
 set incsearch
 set display+=lastline
+set wildmenu
+set ignorecase
 
 " crontab編集用
 set backupskip=/tmp/*,/private/tmp/*
