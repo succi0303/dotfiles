@@ -58,7 +58,6 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/VOoM'
 NeoBundle 'vimoutliner/vimoutliner'
 NeoBundle 'vimwiki/vimwiki'
-NeoBundle 'wookiehangover/jshint.vim'
 NeoBundle 'buftabs'
 
 filetype plugin indent on
