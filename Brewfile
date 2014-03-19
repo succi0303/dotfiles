@@ -49,6 +49,7 @@ cask install iterm2
 cask install keyremap4macbook
 cask install quicksilver
 cask install slate
+cask install textexpander
 cask install vagrant
 cask install virtualbox
 cask install vlc

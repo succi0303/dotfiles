@@ -7,6 +7,10 @@ fpath=($fpath ~/.zfunc)
 # manマニュアルの配置されているパス
 manpath=($X11HOME/man /usr/man /usr/lang/man /usr/local/man)
 
+# sbin
+export PATH=$PATH:/sbin
+export PATH=$PATH:/usr/sbin
+
 # 文字コード
 export LANG=ja_JP.UTF-8
 
