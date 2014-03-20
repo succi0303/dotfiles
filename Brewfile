@@ -33,7 +33,6 @@ install w3m
 install wget
 install z
 install zsh
-install zsh-completions
 
 # install cask-packages
 cask install appcleaner

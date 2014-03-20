@@ -2,7 +2,7 @@
 cdpath=(.. ~ ~/src ~/zsh)
 
 # autoloadされる関数を検索するパス
-fpath=($fpath ~/.zfunc /usr/local/share/zsh-completions)
+fpath=($fpath ~/.zfunc)
 
 # manマニュアルの配置されているパス
 manpath=($X11HOME/man /usr/man /usr/lang/man /usr/local/man)
