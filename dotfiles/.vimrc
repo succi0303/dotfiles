@@ -83,6 +83,7 @@ set incsearch
 set display+=lastline
 set wildmenu
 set ignorecase
+set clipboard=unnamed
 
 " crontab編集用
 set backupskip=/tmp/*,/private/tmp/*
