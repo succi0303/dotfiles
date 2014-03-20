@@ -2,7 +2,7 @@
 cdpath=(.. ~ ~/src ~/zsh)
 
 # autoloadされる関数を検索するパス
-fpath=($fpath ~/.zfunc)
+fpath=($fpath ~/.zfunc /usr/share/zsh/5.0.2/functions)
 
 # manマニュアルの配置されているパス
 manpath=($X11HOME/man /usr/man /usr/lang/man /usr/local/man)
@@ -62,8 +62,9 @@ DIRSTACKSIZE=20
 # プロンプトの設定
 autoload -U colors
 colors
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+autoload -U promptinit
+promptinit
+prompt adam1
 
 # エイリアス
 alias rm='rm -i'
@@ -148,32 +149,8 @@ export EDITOR="/usr/local/bin/vim"
 alias vi="/usr/local/bin/vim"
 alias vim="/usr/local/bin/vim"
 
-## my script
-export PATH="$HOME/scripts":$PATH
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### Powerline-shell
-function powerline_precmd() {
-  export PS1="$(~/.zsh/Powerline-shell/powerline-shell.py --mode flat $? --shell zsh 2> /dev/null)"
-}
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-install_powerline_precmd
-
-### PostgresSQL
-PATH="/Applications/Postgres93.app/Contents/MacOS/bin/:$PATH"
-
 ### Git
 DYLD_LIBRARY_PATH="/Applications/redmine-2.4.2-0/common/lib/libiconv.2.dylib"
-
-### Apache Jena
-export JENAROOT="/Users/succi0303/apache-jena-2.11.1/"
-export PATH=$PATH:$JENAROOT/bin
