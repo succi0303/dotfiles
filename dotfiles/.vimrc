@@ -88,6 +88,25 @@ set clipboard=unnamed
 " crontab編集用
 set backupskip=/tmp/*,/private/tmp/*
 
+" ウィンドウ関連
+nnoremap s <Nop>
+" ウィンドウ分割
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+" ウィンドウ移動
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+" ウィンドウを閉じる
+nnoremap sq :<C-u>q<CR>
+
+" タブ関連
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sn gt
+nnoremap sp gT
+nmap <C-i> :<C-u>Unite tab<CR>
+
 " バッファ移動用のキーマッピング
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
@@ -180,6 +199,11 @@ nnoremap <C-l> :EasyBuffer<CR>
 syntax on
 
 " airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extentions#tabline#show_buffers=0
+let g:airline#extensions#tabline#tab_nr_type=1
+let g:airline#extensions#tabline#fnamemod=":t"
+
 let g:airline_theme='luna'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
