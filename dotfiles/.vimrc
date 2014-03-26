@@ -33,6 +33,7 @@ NeoBundle 'pentie/VimRepress'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
@@ -166,9 +167,9 @@ let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
 
 " unite
 let g:unite_enable_start_insert=1
-nmap <C-o> :Unite line/fast<CR>
+nmap <C-o> :Unite line<CR>
 nmap <C-u> :Unite file_mru buffer file<CR>
-nmap <C-k> :<C-u>Unite tab<CR>
+nmap <C-i> :<C-u>Unite tab<CR>
 
 " open-browser
 let g:netw_nogx=1
