@@ -105,7 +105,9 @@ nnoremap sq :<C-u>q<CR>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
-nmap <C-i> :<C-u>Unite tab<CR>
+nmap <C-k> :<C-u>Unite tab<CR>
+" タブを閉じる
+nnoremap sQ :<C-u>tabclose<CR>
 
 " バッファ移動用のキーマッピング
 nnoremap <silent> [b :bprevious<CR>
