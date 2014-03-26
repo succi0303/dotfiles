@@ -53,9 +53,6 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'ujihisa/neco-look'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'vim-scripts/VOoM'
-NeoBundle 'vimoutliner/vimoutliner'
-NeoBundle 'vimwiki/vimwiki'
 NeoBundle 'buftabs'
 
 filetype plugin indent on
@@ -103,7 +100,6 @@ nnoremap sq :<C-u>q<CR>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
-nmap <C-k> :<C-u>Unite tab<CR>
 " タブを閉じる
 nnoremap sQ :<C-u>tabclose<CR>
 
@@ -172,6 +168,7 @@ let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
 let g:unite_enable_start_insert=1
 nmap <C-o> :Unite line/fast<CR>
 nmap <C-u> :Unite file_mru buffer file<CR>
+nmap <C-k> :<C-u>Unite tab<CR>
 
 " open-browser
 let g:netw_nogx=1
