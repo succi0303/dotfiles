@@ -47,8 +47,11 @@ cask install handbrake
 cask install istat-menus
 cask install iterm2
 cask install keyremap4macbook
+cask install kobito
+cask install omnifocus
 cask install quicksilver
 cask install slate
+cask install sourcetree
 cask install textexpander
 cask install vagrant
 cask install virtualbox

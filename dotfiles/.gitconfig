@@ -1,8 +1,8 @@
 [user]
-  name = succi0303
-  email = succi0303@gmail.com
+	name = succi0303
+	email = succi0303@gmail.com
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/succi0303/.gitignore
   autocrlf = input
 [alias]
   tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
@@ -12,3 +12,9 @@
 	default = matching
 [github]
 	user = succi0303
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
