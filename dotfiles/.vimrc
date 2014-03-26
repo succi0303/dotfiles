@@ -166,7 +166,7 @@ endif
 let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
 
 " unite
-let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=0
 nmap <C-o> :Unite line<CR>
 nmap <C-u> :Unite file_mru buffer file<CR>
 nmap <C-i> :<C-u>Unite tab<CR>
