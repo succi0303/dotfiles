@@ -42,15 +42,16 @@ NeoBundle 'Shougo/vimproc', {
       \ 'mac' : 'make -f make_mac.mak'
       \ },
       \}
+NeoBundle 'szw/vim-tags'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'troydm/easybuffer.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'troydm/easybuffer.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'ujihisa/neco-look'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -121,7 +122,8 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme hemisu
+colorscheme lucius
+set background=dark
 
 " プラグイン
 
@@ -167,9 +169,13 @@ let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
 
 " unite
 let g:unite_enable_start_insert=0
-nmap <C-o> :Unite line<CR>
-nmap <C-u> :Unite file_mru buffer file<CR>
-nmap <C-i> :<C-u>Unite tab<CR>
+nnoremap <silent> ,ul :<C-u>Unite line<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,ut :<C-u>Unite tab<CR>
+nnoremap <silent> ,uf :<C-u>Unite file_mru<CR>
+" nmap <C-o> :Unite line<CR>
+" nmap <C-u> :Unite file_mru buffer file<CR>
+" nmap <C-i> :<C-u>Unite tab<CR>
 
 " open-browser
 let g:netw_nogx=1

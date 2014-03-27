@@ -13,6 +13,7 @@ tap phinze/homebrew-cask
 install brew-cask
 
 # install brew-packages
+install ctags
 install curl
 install git
 install git-flow
