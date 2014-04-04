@@ -27,6 +27,7 @@ install postgresql
 install python3
 install reattach-to-user-namespace
 install sqlite
+install tig
 install tmux
 install tree
 install vim --with-lua
@@ -57,6 +58,7 @@ cask install textexpander
 cask install vagrant
 cask install virtualbox
 cask install vlc
+cask install vmware-fusion
 
 # install Ruby
 install openssl
