@@ -59,6 +59,7 @@ cask install vlc
 cask install vmware-fusion
 
 # install Ruby
+install libyaml
 install openssl
 install rbenv
 install readline
