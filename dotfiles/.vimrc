@@ -26,6 +26,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mrtazz/simplenote.vim'
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'noahfrederick/vim-hemisu'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
@@ -237,3 +238,10 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 
 " simplenote.vim
 source ~/.simplenoterc
+
+" vim-indent-guides
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
