@@ -73,9 +73,11 @@ install notmuch
 install urlview
 
 # for Nokogiri
+tap homebrew/dupes
 install libxml2
 install libxslt
-link libxml2 libxslt
+install libiconv
+link libxml2 libxslt libiconv
 
 # install R
 tap homebrew/science
