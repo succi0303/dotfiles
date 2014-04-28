@@ -43,6 +43,7 @@ NeoBundle 'Shougo/vimproc', {
       \ 'mac' : 'make -f make_mac.mak'
       \ },
       \}
+NeoBundle 'sjl/badwolf'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'thinca/vim-quickrun'
@@ -123,7 +124,7 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme lucius
+colorscheme badwolf
 set background=dark
 
 " プラグイン

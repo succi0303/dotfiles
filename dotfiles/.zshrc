@@ -93,6 +93,7 @@ alias lsa='ls -al'
 alias be='bundle exec'
 
 alias bnew='bookmark new'
+
 alias bls='bookmark ls'
 alias bed='bookmark edit'
 
