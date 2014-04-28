@@ -89,6 +89,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lsa='ls -al'
 
+
 alias be='bundle exec'
 
 alias bnew='bookmark new'
@@ -132,3 +133,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Git
 DYLD_LIBRARY_PATH="/Applications/redmine-2.4.2-0/common/lib/libiconv.2.dylib"
+
+### tmuxinator
+# https://gist.github.com/ser1zw/2242920
+fpath=($HOME/.tmuxinator/completion ${fpath})
+autoload -U compinit
+compinit
