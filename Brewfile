@@ -52,7 +52,6 @@ cask install keyremap4macbook
 cask install kobito
 cask install quicksilver
 cask install sourcetree
-cask install textexpander
 cask install vagrant
 cask install virtualbox
 cask install vlc
