@@ -126,7 +126,6 @@ set grepprg=grep\ -nh
 
 " カラースキーマ
 colorscheme badwolf
-set background=dark
 
 " プラグイン
 

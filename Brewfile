@@ -9,7 +9,7 @@ tap homebrew/binary
 tap homebrew/versions
 
 # install brew-cask
-tap phinze/homebrew-cask
+tap caskroom/cask
 install brew-cask
 
 # install brew-packages
