@@ -22,7 +22,6 @@ brew install sqlite
 brew install tmux
 brew install vim --with-lua
 brew install wget
-brew install z
 brew install zsh
 
 echo "install ruby environment"

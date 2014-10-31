@@ -98,13 +98,6 @@ alias bls='bookmark ls'
 alias bed='bookmark edit'
 
 # 外部ツール設定
-## z
-_Z_CMD=j
-source /usr/local/bin/z.sh
-precomd() {
-  _z --add "$(pwd -P)"
-}
-
 ## auto-fu
 if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   source ~/.zsh/auto-fu.zsh/auto-fu.zsh
