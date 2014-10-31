@@ -1,12 +1,12 @@
 " neobundle
 
-set nocompatible
+set nocompatible 
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -59,6 +59,8 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'ujihisa/neco-look'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'buftabs'
+
+call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
@@ -236,9 +238,6 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeMapActivateNode="<CR>"
 let file_name = expand("%:p")
 nnoremap <C-e> :NERDTreeToggle<CR>
-
-" simplenote.vim
-source ~/.simplenoterc
 
 " vim-indent-guides
 let g:indent_guides_auto_colors=0
