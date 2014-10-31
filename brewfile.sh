@@ -47,6 +47,7 @@ brew cask install flash
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install karabiner
+brew cask install papers
 brew cask install vagrant
 brew cask install virtualbox
 
