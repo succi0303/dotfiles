@@ -17,6 +17,7 @@ brew install brew-cask
 echo "install brew-packages"
 brew install curl
 brew install git
+brew install phantomjs
 brew install reattach-to-user-namespace
 brew install sqlite
 brew install tmux
@@ -39,6 +40,7 @@ brew install libiconv
 link libxml2 libxslt libiconv
 
 echo "install cask-packages"
+brew cask install appcleaner
 brew cask install caffeine
 brew cask install dropbox
 brew cask install firefox
