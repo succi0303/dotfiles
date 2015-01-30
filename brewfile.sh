@@ -17,6 +17,7 @@ brew install brew-cask
 echo "install brew-packages"
 brew install curl
 brew install git
+brew install mongodb
 brew install phantomjs
 brew install reattach-to-user-namespace
 brew install sqlite
