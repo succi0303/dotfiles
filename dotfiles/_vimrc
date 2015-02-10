@@ -1,0 +1,150 @@
+set nocompatible
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'bling/vim-airline'
+NeoBundle 'deton/jasegment.vim'
+NeoBundle 'fuenor/qfixgrep'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'noahfrederick/vim-hemisu'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'thinca/vim-qfreplace'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'vim-ruby/vim-ruby'
+
+call neobundle#end()
+
+filetype plugin indent on
+NeoBundleCheck
+
+set backupdir=~/.vim_backup
+set directory=~/.vim_backup
+set expandtab
+set smarttab
+set backspace=indent,eol,start
+set autoindent
+set tabstop=2 shiftwidth=2 softtabstop=2
+set hidden
+set showcmd
+set cursorline
+set number
+set laststatus=2
+set showmatch
+set incsearch
+set display+=lastline
+set wildmenu
+set ignorecase
+
+" ウィンドウ関連 
+nnoremap s <Nop>
+" ウィンドウ分割
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+" ウィンドウ移動
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+" ウィンドウを閉じる
+nnoremap sq :<C-u>q<CR>
+
+" タブ関連
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sn gt
+nnoremap sp gT
+" タブを閉じる
+nnoremap sQ :<C-u>tabclose<CR>
+
+" バッファ移動用のキーマッピング
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
+" 検索結果のハイライトをEsc連打でクリア
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
+" コマンドラインモードの補完を有効
+set wildmode=list,full
+
+
+" プラグイン
+
+" neocomplete
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_smart_case=1
+let g:neocomplete#sources#syntax#min_keyword_length=3
+let g:neocomplete#lock_buffer_name_pattern='\*ku\*'
+let g:neocomplete#sources#dictionary#dictionaries={
+  \ 'default' : '',
+  \ 'vimshell' : $HOME.'/.vimshell_hist',
+  \ 'scheme' : $HOME.'.gosh_completion'
+  \ }
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns={}
+endif
+let g:neocomplete#keyword_patterns['default']='\h\w'
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns={}
+endif
+let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" neosnippet
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+end
+let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
+
+" unite
+let g:unite_enable_start_insert=0
+nnoremap <silent> ,ul :<C-u>Unite line<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,ut :<C-u>Unite tab<CR>
+nnoremap <silent> ,uf :<C-u>Unite file_mru<CR>
+
+" vim-easymotion
+let g:EasyMotion_leader_key=";"
+let g:EasyMotion_grouping=1
+
+" vim-airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_buffers=0
+let g:airline#extensions#tabline#tab_nr_type=1
+let g:airline#extensions#tabline#fnamemod=":t"
+
+let g:airline_theme='luna'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
