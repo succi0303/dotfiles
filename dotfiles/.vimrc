@@ -18,20 +18,16 @@ NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'kana/vim-smartinput'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mrtazz/simplenote.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'noahfrederick/vim-hemisu'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'pentie/VimRepress'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplete'
@@ -56,7 +52,6 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'troydm/easybuffer.vim'
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'ujihisa/neco-look'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'buftabs'
 
@@ -197,11 +192,6 @@ let g:quickrun_config['markdown'] = {
                         \ 'exec' : '%c -f %s'
                         \ }
 
-" vimrepress
-nnoremap ,bc :BlogNew<CR>
-nnoremap ,bl :BlogList<CR>
-nnoremap ,bp :BlogPreview publish<CR>
-
 " EasyBuffer.vim
 nnoremap <C-l> :EasyBuffer<CR>
 syntax on
@@ -245,6 +235,3 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgray
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
-
-" vim-coffee-script
-au BufWritePost *.coffee :CoffeeCompile CoffeeWatch vert
