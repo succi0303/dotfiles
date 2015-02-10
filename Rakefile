@@ -5,7 +5,7 @@ SOURCE_DIR = "#{Dir.pwd}/dotfiles/"
 TARGET_DIR = "#{ENV['HOME']}/"
 
 dot_files = []
-Dir.glob('dotfiles/.*') do |path|
+Dir.glob(['dotfiles/.*', 'dotfiles/_*']) do |path|
   name = File.basename(path)
   next if name == '.'
   next if name == '..'
