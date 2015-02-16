@@ -15,17 +15,12 @@ NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/JpFormat.vim'
 NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'kana/vim-smartinput'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'noahfrederick/vim-hemisu'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'scrooloose/nerdtree'
@@ -53,7 +48,6 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'troydm/easybuffer.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'buftabs'
 
 call neobundle#end()
 
@@ -213,9 +207,6 @@ let g:airline_symbols.linenr = ''
 
 " JpFormat
 set formatexpr=jpfmt#formatexpr()
-
-" Gitv
-autocmd FileType git :setlocal foldlevel=99
 
 " vim-smartinput-endwise
 call smartinput_endwise#define_default_rules()
