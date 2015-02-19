@@ -43,6 +43,7 @@ link libxml2 libxslt libiconv
 echo "install cask-packages"
 brew cask install appcleaner
 brew cask install caffeine
+brew cask install chefdk
 brew cask install dropbox
 brew cask install firefox
 brew cask install flash
