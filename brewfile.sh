@@ -48,6 +48,7 @@ brew cask install dropbox
 brew cask install firefox
 brew cask install flash
 brew cask install google-chrome
+brew cask install heroku-toolbelt
 brew cask install iterm2
 brew cask install karabiner
 brew cask install papers
