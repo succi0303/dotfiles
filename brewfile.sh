@@ -21,6 +21,7 @@ brew install mongodb
 brew install phantomjs
 brew install reattach-to-user-namespace
 brew install sqlite
+brew install tig
 brew install tmux
 brew install vim --with-lua
 brew install wget
@@ -44,6 +45,7 @@ echo "install cask-packages"
 brew cask install appcleaner
 brew cask install caffeine
 brew cask install chefdk
+brew cask install coda
 brew cask install dropbox
 brew cask install firefox
 brew cask install flash
