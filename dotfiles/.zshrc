@@ -133,3 +133,6 @@ DYLD_LIBRARY_PATH="/Applications/redmine-2.4.2-0/common/lib/libiconv.2.dylib"
 fpath=($HOME/.tmuxinator/completion ${fpath})
 autoload -U compinit
 compinit
+
+# added by travis gem
+[ -f /Users/succi0303/.travis/travis.sh ] && source /Users/succi0303/.travis/travis.sh
