@@ -55,6 +55,7 @@ brew cask install iterm2
 brew cask install karabiner
 brew cask install papers
 brew cask install quicksilver
+brew cask install slack
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vmware-fusion
