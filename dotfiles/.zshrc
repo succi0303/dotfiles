@@ -136,3 +136,7 @@ compinit
 
 # added by travis gem
 [ -f /Users/succi0303/.travis/travis.sh ] && source /Users/succi0303/.travis/travis.sh
+
+# go
+export GOPATH=$HOME/.go
+export PATH=$PATH:$HOME/.go/bin
