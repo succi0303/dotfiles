@@ -125,9 +125,6 @@ alias vim="/usr/local/bin/vim"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### Git
-DYLD_LIBRARY_PATH="/Applications/redmine-2.4.2-0/common/lib/libiconv.2.dylib"
-
 ### tmuxinator
 # https://gist.github.com/ser1zw/2242920
 fpath=($HOME/.tmuxinator/completion ${fpath})
@@ -140,3 +137,6 @@ compinit
 # go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/bin
+
+# hub
+eval "$(hub alias -s)"
