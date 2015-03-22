@@ -140,3 +140,4 @@ export PATH=$PATH:$HOME/.go/bin
 
 # hub
 eval "$(hub alias -s)"
+compdef hub=git
