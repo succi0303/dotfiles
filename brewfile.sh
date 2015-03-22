@@ -18,6 +18,7 @@ echo "install brew-packages"
 brew install curl
 brew install git
 brew install go
+brew install hub
 brew install mongodb
 brew install phantomjs
 brew install reattach-to-user-namespace
@@ -46,7 +47,6 @@ echo "install cask-packages"
 brew cask install appcleaner
 brew cask install caffeine
 brew cask install chefdk
-brew cask install coda
 brew cask install dropbox
 brew cask install firefox
 brew cask install flash
