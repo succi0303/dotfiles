@@ -15,10 +15,12 @@ brew tap caskroom/cask
 brew install brew-cask
 
 echo "install brew-packages"
+brew install ag
 brew install curl
 brew install git
 brew install go
 brew install hub
+brew install peco
 brew install reattach-to-user-namespace
 brew install sqlite
 brew install tig
