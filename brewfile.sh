@@ -20,6 +20,7 @@ brew install curl
 brew install git
 brew install go
 brew install hub
+brew install nodejs
 brew install peco
 brew install reattach-to-user-namespace
 brew install sqlite
