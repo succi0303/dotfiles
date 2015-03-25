@@ -23,12 +23,12 @@ desc 'Install dotfiles.'
 task :install do
   dot_files.each do |file_name|
     if File.exists?(TARGET_DIR + file_name)
-      puts "#{file_name}が既に存在します"
+      puts "#{file_name}が既に存在します。"
     else
       sh "ln -s #{SOURCE_DIR + file_name} #{TARGET_DIR + file_name}"
     end
   end
-  puts "設定ファイルをインストールしました"
+  puts "設定ファイルをインストールしました。"
 end
 
 desc 'Setup for dotfiles.'
