@@ -78,3 +78,23 @@ namespace :zsh do
     end
   end
 end
+
+namespace :brew do
+  desc 'Install homebrew.'
+  task :setup do
+    if `which brew`.empty?
+      sh 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+    else
+      puts 'brewが既に存在します。'
+    end
+  end
+
+  desc 'Execute brewfile.sh'
+  task :file do
+    if File.exists? './brewfile.sh'
+      sh 'sh ./brewfile.sh'
+    else
+      puts 'brewfile.shが存在しません。'
+    end
+  end
+end
