@@ -58,7 +58,7 @@ end
 namespace :zsh do
   directory zsh_dir = "#{ENV['HOME']}/.zsh"
 
-  task :setup => [zsh_dir, :auto_fu] do
+  task :setup => [zsh_dir, :auto_fu, :zsh_completions] do
     puts 'zshのセットアップを完了しました。'
   end
 
@@ -67,6 +67,14 @@ namespace :zsh do
       puts 'auto-fu.zshが既に存在します。'
     else
       sh "git clone https://github.com/hchbaw/auto-fu.zsh #{zsh_dir}/auto-fu.zsh"
+    end
+  end
+
+  task :zsh_completions do
+    if File.exists? "#{zsh_dir}/zsh-completions"
+      puts 'zsh-completionsが既に存在します。'
+    else
+      sh "git clone https://github.com/zsh-users/zsh-completions #{zsh_dir}/zsh-completions"
     end
   end
 end

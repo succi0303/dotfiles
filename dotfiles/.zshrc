@@ -100,6 +100,12 @@ if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   zstyle ':completion:*' completer _oldlist _complete
 fi
 
+## zsh-completions
+if [ -d ~/.zsh/zsh-completions ] ; then
+  fpath=(~/.zsh/zsh-completions/src $fpath)
+  compinit
+fi
+
 ## rbenv
 if [ -d ${HOME}/.rbenv ] ; then
   export PATH="$HOME/.rbenv/bin":"$HOME/.rbenv/shims":$PATH
@@ -125,4 +131,3 @@ export PATH=$PATH:$HOME/.go/bin
 
 ## hub
 eval "$(hub alias -s)"
-compdef hub=git
