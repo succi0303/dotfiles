@@ -37,8 +37,8 @@ task :setup => ["vim:setup", "zsh:setup"] do
 end
 
 namespace :vim do
-  directory backup_dir = "#{ENV['HOME']}/.vim_backup"
-  directory snippet_dir = "#{ENV['HOME']}/.vim/my-vim-snippets"
+  directory backup_dir = "#{ENV['HOME']}/.vim/backup"
+  directory snippet_dir = "#{ENV['HOME']}/.vim/vim_snippets"
   directory bundle_dir = "#{ENV['HOME']}/.vim/bundle"
 
   task :setup => [backup_dir, snippet_dir, :neobundle] do

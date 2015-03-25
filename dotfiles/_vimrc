@@ -35,8 +35,8 @@ call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
-set backupdir=~/.vim_backup
-set directory=~/.vim_backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 set expandtab
 set smarttab
 set backspace=indent,eol,start
@@ -129,7 +129,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 end
-let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
+let g:neosnippet#snippets_directory='~/.vim/vim_snippets'
 
 " unite
 let g:unite_enable_start_insert=0

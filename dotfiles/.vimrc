@@ -58,8 +58,8 @@ NeoBundleCheck
 set encoding=UTF-8
 set fileencoding=UTF-8
 set termencoding=UTF-8
-set backupdir=~/.vim_backup
-set directory=~/.vim_backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 set expandtab
 set smarttab
 set backspace=indent,eol,start
@@ -159,7 +159,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#snippets_directory='~/.vim/my-vim-snippets'
+let g:neosnippet#snippets_directory='~/.vim/vim_snippets'
 
 " unite
 let g:unite_enable_start_insert=0
