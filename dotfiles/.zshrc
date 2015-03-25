@@ -89,14 +89,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lsa='ls -al'
 
-
-alias be='bundle exec'
-
-alias bnew='bookmark new'
-
-alias bls='bookmark ls'
-alias bed='bookmark edit'
-
 # 外部ツール設定
 ## auto-fu
 if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
@@ -114,30 +106,23 @@ if [ -d ${HOME}/.rbenv ] ; then
   eval "$(rbenv init - zsh)"
 fi
 
-## grep
-# GREP_OPTIONS="--color=always";export GREP_OPTIONS
-
 ## vim
 export EDITOR="/usr/local/bin/vim"
 alias vi="/usr/local/bin/vim"
 alias vim="/usr/local/bin/vim"
 
-### Added by the Heroku Toolbelt
+## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### tmuxinator
-# https://gist.github.com/ser1zw/2242920
-fpath=($HOME/.tmuxinator/completion ${fpath})
-autoload -U compinit
-compinit
+## travis gem
+if [ -f ${HOME}/.travis/travis.sh ]; then
+  source ${HOME}/.travis/travis.sh
+fi
 
-# added by travis gem
-[ -f /Users/succi0303/.travis/travis.sh ] && source /Users/succi0303/.travis/travis.sh
-
-# go
+## go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/bin
 
-# hub
+## hub
 eval "$(hub alias -s)"
 compdef hub=git
