@@ -107,8 +107,8 @@ if [ -d ~/.zsh/zsh-completions ] ; then
 fi
 
 ## rbenv
-if [ -d ${HOME}/.rbenv ] ; then
-  export PATH="$HOME/.rbenv/bin":"$HOME/.rbenv/shims":$PATH
+if [ -d ~/.rbenv ] ; then
+  export PATH="~/.rbenv/bin":"~/.rbenv/shims":$PATH
   eval "$(rbenv init - zsh)"
 fi
 
@@ -121,13 +121,13 @@ alias vim="/usr/local/bin/vim"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ## travis gem
-if [ -f ${HOME}/.travis/travis.sh ]; then
-  source ${HOME}/.travis/travis.sh
+if [ -f ~/.travis/travis.sh ]; then
+  source ~/.travis/travis.sh
 fi
 
 ## go
-export GOPATH=$HOME/.go
-export PATH=$PATH:$HOME/.go/bin
+export GOPATH=~/.go
+export PATH=$PATH:~/.go/bin
 
 ## hub
 eval "$(hub alias -s)"
