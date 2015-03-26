@@ -90,7 +90,7 @@ namespace :brew do
   end
 
   desc 'Execute brewfile.sh'
-  task :file do
+  task :bundle do
     if File.exists? './brewfile.sh'
       sh 'sh ./brewfile.sh'
     else
