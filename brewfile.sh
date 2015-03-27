@@ -57,6 +57,7 @@ brew cask install iterm2
 brew cask install karabiner
 brew cask install kobito
 brew cask install papers
+brew cask install qlmarkdown
 brew cask install quicksilver
 brew cask install slack
 brew cask install sourcetree
