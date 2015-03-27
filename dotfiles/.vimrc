@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'bling/vim-airline'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/JpFormat.vim'
@@ -116,7 +117,7 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme industry
+colorscheme Tomorrow-Night-Bright
 
 " プラグイン
 
@@ -222,7 +223,7 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 
 " vim-indent-guides
 let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgray
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=gray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
