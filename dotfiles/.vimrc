@@ -162,14 +162,15 @@ endif
 let g:neosnippet#snippets_directory='~/.vim/vim_snippets'
 
 " unite
-let g:unite_enable_start_insert=0
-nnoremap <silent> ,ul :<C-u>Unite line<CR>
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,ut :<C-u>Unite tab<CR>
-nnoremap <silent> ,uf :<C-u>Unite file_mru<CR>
-" nmap <C-o> :Unite line<CR>
-" nmap <C-u> :Unite file_mru buffer file<CR>
-" nmap <C-i> :<C-u>Unite tab<CR>
+let g:unite_enable_start_insert=1
+let g:unite_enable_ignore_case=1
+let g:unite_enable_smart_case=1
+nnoremap <silent> ,l :<C-u>Unite line<CR>
+nnoremap <silent> ,b :<C-u>Unite buffer<CR>
+nnoremap <silent> ,t :<C-u>Unite tab<CR>
+nnoremap <silent> ,f :<C-u>Unite file_mru<CR>
+nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> ,r :<C-u>UniteResume search-buffer<CR>
 
 " open-browser
 let g:netw_nogx=1
