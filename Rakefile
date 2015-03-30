@@ -81,7 +81,7 @@ end
 
 namespace :brew do
   desc 'Install homebrew.'
-  task :setup do
+  task :install do
     if `which brew`.empty?
       sh 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
     else
