@@ -16,9 +16,12 @@ NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/JpFormat.vim'
 NeoBundle 'fuenor/qfixgrep'
+NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'godlygeek/tabular'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'kana/vim-smartinput'
+NeoBundle 'kannokanno/previm'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
@@ -46,7 +49,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'troydm/easybuffer.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 
@@ -181,17 +183,6 @@ vmap gx <Plug>(openbrowser-smart-search)
 let g:EasyMotion_leader_key=";"
 let g:EasyMotion_grouping=1
 
-" vim-quickrun
-let g:quickrun_config = {}
-let g:quickrun_config['markdown'] = {
-                        \ 'command' : 'bluecloth',
-                        \ 'exec' : '%c -f %s'
-                        \ }
-
-" EasyBuffer.vim
-nnoremap <C-l> :EasyBuffer<CR>
-syntax on
-
 " airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extentions#tabline#show_buffers=0
@@ -228,3 +219,18 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=gray
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
+
+" qfixhowm
+let howm_dir = '~/Dropbox/howm'
+let howm_fileencoding = 'utf-8'
+let howm_fileformat = 'unix'
+let QFixWin_EnableMode = 1
+let QFix_UseLocationList = 1
+let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.md'
+let QFixHowm_FileType = 'markdown'
+let QFixHowm_Title = '#'
+let QFixHowm_Template = [
+  \"# %TAG%",
+  \""
+  \]
+let QFixHowm_SaveTime = -1
