@@ -235,4 +235,4 @@ let QFixHowm_Template = [
   \""
   \]
 let QFixHowm_SaveTime = -1
-let QFixMRU_Entries = 50
+let QFixMRU_Entries = 30
