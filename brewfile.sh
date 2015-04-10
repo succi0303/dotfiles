@@ -46,6 +46,7 @@ link libxml2 libxslt libiconv
 
 echo "install cask-packages"
 brew cask install appcleaner
+brew cask install atom
 brew cask install caffeine
 brew cask install chefdk
 brew cask install dropbox
