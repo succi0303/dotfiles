@@ -19,6 +19,7 @@ brew install ag
 brew install curl
 brew install git
 brew install go
+brew install heroku-toolbelt
 brew install hub
 brew install nodejs
 brew install peco
@@ -53,7 +54,6 @@ brew cask install dropbox
 brew cask install firefox
 brew cask install flash
 brew cask install google-chrome
-brew cask install heroku-toolbelt
 brew cask install iterm2
 brew cask install karabiner
 brew cask install kobito
