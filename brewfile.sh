@@ -23,6 +23,7 @@ brew install heroku-toolbelt
 brew install hub
 brew install nodejs
 brew install peco
+brew install pyenv
 brew install reattach-to-user-namespace
 brew install sqlite
 brew install tig
