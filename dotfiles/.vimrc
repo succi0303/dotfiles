@@ -62,11 +62,7 @@ set fileencoding=UTF-8
 set termencoding=UTF-8
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
-set expandtab
-set smarttab
 set backspace=indent,eol,start
-set autoindent
-set tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set showcmd
 set cursorline
@@ -78,6 +74,20 @@ set display+=lastline
 set wildmenu
 set ignorecase
 set clipboard=unnamed
+
+" インデント
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set autoindent
+set smartindent
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 " crontab編集用
 set backupskip=/tmp/*,/private/tmp/*
