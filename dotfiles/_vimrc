@@ -8,19 +8,24 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'kana/vim-smartinput'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neomru.vim'
@@ -30,6 +35,8 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 
 call neobundle#end()
@@ -39,11 +46,7 @@ NeoBundleCheck
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
-set expandtab
-set smarttab
 set backspace=indent,eol,start
-set autoindent
-set tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set showcmd
 set cursorline
@@ -57,6 +60,21 @@ set wildmenu
 set ignorecase
 set clipboard=unnamed
 set noundofile
+
+" インデント
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set autoindent
+set smartindent
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd BufNewFile,BufRead *.yml,*.yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 " ウィンドウ関連 
 nnoremap s <Nop>
@@ -144,6 +162,11 @@ nnoremap <silent> ,f :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,r :<C-u>UniteResume search-buffer<CR>
 
+" open-browser
+let g:netw_nogx=1
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
 " vim-easymotion
 let g:EasyMotion_leader_key=";"
 let g:EasyMotion_grouping=1
@@ -167,6 +190,19 @@ call smartinput_endwise#define_default_rules()
 
 " syntastic
 let g:syntastic_auto_loc_list=0
+
+" NERD-Tree
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMapActivateNode="<CR>"
+let file_name = expand("%:p")
+nnoremap <C-e> :NERDTreeToggle<CR>
+
+" vim-indent-guides
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,ColorScheme * :hi IndentGuidesOdd ctermbg=gray
+autocmd VimEnter,ColorScheme * :hi IndentGuidesEven ctermbg=darkgray
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
 
 " qfixhowm
 let howm_dir = '~/howm'
