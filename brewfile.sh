@@ -17,6 +17,7 @@ brew install brew-cask
 echo "install brew-packages"
 brew install ag
 brew install curl
+brew install ghq
 brew install git
 brew install go
 brew install heroku-toolbelt
