@@ -176,7 +176,7 @@ endif
 let g:neosnippet#snippets_directory='~/.vim/vim_snippets'
 
 " unite
-let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=0
 let g:unite_enable_ignore_case=1
 let g:unite_enable_smart_case=1
 nnoremap <silent> ,l :<C-u>Unite line<CR>
@@ -185,6 +185,8 @@ nnoremap <silent> ,t :<C-u>Unite tab<CR>
 nnoremap <silent> ,f :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,r :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> ,B :<C-u>Unite bookmark<CR>
+nnoremap <silent> ,F :<C-u>Unite file<CR>
 
 " open-browser
 let g:netw_nogx=1
