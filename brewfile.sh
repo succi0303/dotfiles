@@ -52,7 +52,6 @@ brew cask install appcleaner
 brew cask install atom
 brew cask install caffeine
 brew cask install chefdk
-brew cask install coteditor
 brew cask install dropbox
 brew cask install firefox
 brew cask install flash
