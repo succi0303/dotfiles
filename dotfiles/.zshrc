@@ -127,9 +127,11 @@ if [ -d ~/.rbenv ] ; then
 fi
 
 ## vim
-export EDITOR="/usr/local/bin/vim"
-alias vi="/usr/local/bin/vim"
-alias vim="/usr/local/bin/vim"
+if builtin command -v /usr/local/bin/vim > /dev/null; then
+  export EDITOR="/usr/local/bin/vim"
+  alias vi="/usr/local/bin/vim"
+  alias vim="/usr/local/bin/vim"
+fi
 
 ## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -144,7 +146,9 @@ export GOPATH=~/.go
 export PATH=$PATH:~/.go/bin
 
 ## hub
-eval "$(hub alias -s)"
+if builtin command -v hub > /dev/null; then
+  eval "$(hub alias -s)"
+fi
 
 ## pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
