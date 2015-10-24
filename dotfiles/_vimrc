@@ -15,6 +15,7 @@ NeoBundle 'deton/jasegment.vim'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'gregsexton/gitv'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'kana/vim-smartinput'
@@ -30,8 +31,11 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vim-vcs'
 NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimshell'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
@@ -152,7 +156,7 @@ end
 let g:neosnippet#snippets_directory='~/.vim/vim_snippets'
 
 " unite
-let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=0
 let g:unite_enable_ignore_case=1
 let g:unite_enable_smart_case=1
 nnoremap <silent> ,l :<C-u>Unite line<CR>
@@ -161,6 +165,8 @@ nnoremap <silent> ,t :<C-u>Unite tab<CR>
 nnoremap <silent> ,f :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,r :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> ,B :<C-u>Unite bookmark<CR>
+nnoremap <silent> ,F :<C-u>Unite file<CR>
 
 " open-browser
 let g:netw_nogx=1
@@ -219,3 +225,18 @@ let QFixHowm_Template = [
   \]
 let QFixHowm_SaveTime = -1
 let QFixMRU_Entries = 50
+
+" VimShell
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_right_prompt = 'vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
+let g:vimshell_prompt = $USERNAME."% "
+nnoremap ms :<C-u>VimShell<CR>
+nnoremap mS :<C-u>VimShellBufferDir<CR>
+nnoremap mp :<C-u>VimShellPop<CR>
+
+" VimFiler
+nnoremap mf :<C-u>VimFiler<CR>
+nnoremap mF :<C-u>VimFilerBufferDir<CR>
+
+" gitv
+autocmd FileType git :setlocal foldlevel=99

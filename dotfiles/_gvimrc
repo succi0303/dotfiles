@@ -1,16 +1,26 @@
-set showtabline=2
+set showtabline=3
+
+" ツールバー非表示
 set guioptions-=T
-set guioptions-=m
-set guioptions-=r
-set guioptions-=R
+
+" メニューバー非表示
+" set guioptions-=m
+
+" 右スクロールバー非表示
+" set guioptions-=r
+" set guioptions-=R
+
+" 左スクロールバー非表示
 set guioptions-=l
 set guioptions-=L
+
 set visualbell t_vb=
 
 colorscheme Tomorrow
+" autocmd GUIEnter * set transparency=200
 
-set guifont=MS_Gothic:h12
-set guifontwide=MS_Gothic:h12
+set guifont=MS_Gothic:h10
+set guifontwide=MS_Gothic:h10
 
 if has('multi_byte_ime')
   hi Cursor guifg=bg guibg=Green gui=NONE
