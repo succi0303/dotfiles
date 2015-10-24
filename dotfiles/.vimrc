@@ -180,6 +180,15 @@ if has('conceal')
 endif
 let g:neosnippet#snippets_directory='~/.vim/vim_snippets'
 
+" VimFiler
+nnoremap <silent> mf :<C-u>VimFiler<CR>
+nnoremap <silent> mF :<C-u>VimFilerBufferDir<CR>
+
+" VimShell
+nnoremap <silent> ms :<C-u>VimShell<CR>
+nnoremap <silent> mS :<C-u>VimShellBufferDir<CR>
+nnoremap <silent> mp :<C-u>VimShellPop<CR>
+
 " unite
 let g:unite_enable_start_insert=0
 let g:unite_enable_ignore_case=1
