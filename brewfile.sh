@@ -22,7 +22,7 @@ brew install git
 brew install go
 brew install heroku-toolbelt
 brew install hub
-brew install nodebrew
+brew install nvm
 brew install peco
 brew install pyenv
 brew install reattach-to-user-namespace

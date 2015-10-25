@@ -150,3 +150,9 @@ if [ -d "${PYENV_ROOT}" ] ; then
   export PATH=${PYENV_ROOT}/bin:$PATH
   eval "$(pyenv init -)"
 fi
+
+## nvm
+if [ -d /usr/local/opt/nvm ] ; then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+fi

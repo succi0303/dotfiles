@@ -32,7 +32,7 @@ task :install do
 end
 
 desc 'Setup for dotfiles.'
-task :setup => ["vim:setup", "zsh:setup"] do
+task :setup => ["vim:setup", "zsh:setup", "nvm:setup"] do
   "セットアップ処理を完了しました。"
 end
 
@@ -76,6 +76,14 @@ namespace :zsh do
     else
       sh "git clone https://github.com/zsh-users/zsh-completions #{zsh_dir}/zsh-completions"
     end
+  end
+end
+
+namespace :nvm do
+  directory nvm_dir = "#{ENV['HOME']}/.nvm"
+
+  task :setup => [nvm_dir] do
+    puts 'nvmのセットアップを完了しました。'
   end
 end
 
