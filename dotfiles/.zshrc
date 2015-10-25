@@ -1,12 +1,6 @@
 # cdコマンドのサーチパス
 cdpath=(.. ~ ~/src ~/zsh)
 
-# autoloadされる関数を検索するパス
-fpath=($fpath ~/.zfunc /usr/share/zsh/5.0.2/functions)
-
-# manマニュアルの配置されているパス
-manpath=($X11HOME/man /usr/man /usr/lang/man /usr/local/man)
-
 # sbin
 export PATH=$PATH:/sbin
 export PATH=$PATH:/usr/sbin
