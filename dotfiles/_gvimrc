@@ -19,8 +19,8 @@ set visualbell t_vb=
 colorscheme Tomorrow
 " autocmd GUIEnter * set transparency=200
 
-set guifont=MS_Gothic:h10
-set guifontwide=MS_Gothic:h10
+set guifont=Ricty:h11
+set guifontwide=Ricty:h11
 
 if has('multi_byte_ime')
   hi Cursor guifg=bg guibg=Green gui=NONE
