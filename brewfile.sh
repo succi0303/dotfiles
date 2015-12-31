@@ -22,10 +22,13 @@ brew install git
 brew install go
 brew install heroku-toolbelt
 brew install hub
+brew install java
 brew install nvm
 brew install peco
 brew install pyenv
 brew install reattach-to-user-namespace
+brew install sbt
+brew install scala
 brew install sqlite
 brew install tig
 brew install tmux
