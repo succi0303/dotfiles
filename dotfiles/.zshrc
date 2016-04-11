@@ -136,8 +136,8 @@ if [ -f ~/.travis/travis.sh ]; then
 fi
 
 ## go
-export GOPATH=~/.go
-export PATH=$PATH:~/.go/bin
+export GOPATH=$HOME
+export PATH=$PATH:$GOPATH/bin
 
 ## hub
 if builtin command -v hub > /dev/null; then
