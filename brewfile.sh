@@ -9,8 +9,6 @@ brew upgrade
 echo "add repositories"
 brew tap homebrew/binary
 brew tap homebrew/versions
-
-echo "install brew cask"
 brew tap caskroom/cask
 
 echo "install brew-packages"
@@ -23,7 +21,6 @@ brew install git
 brew install go
 brew install heroku-toolbelt
 brew install hub
-brew install java
 brew install nvm
 brew install peco
 brew install pyenv
@@ -61,6 +58,7 @@ brew cask install firefox
 brew cask install flash
 brew cask install google-chrome
 brew cask install iterm2
+brew cask install java
 brew cask install karabiner
 brew cask install qlmarkdown
 brew cask install quicksilver
