@@ -62,12 +62,11 @@ brew cask install flash
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install karabiner
-brew cask install kobito
 brew cask install qlmarkdown
 brew cask install quicksilver
 brew cask install slack
 brew cask install sourcetree
-brew cask install synology-cloud-station
+brew cask install synology-cloud-station-drive
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vmware-fusion
