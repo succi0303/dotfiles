@@ -12,7 +12,6 @@ brew tap homebrew/versions
 
 echo "install brew cask"
 brew tap caskroom/cask
-brew install brew-cask
 
 echo "install brew-packages"
 brew install ag
