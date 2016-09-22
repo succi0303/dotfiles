@@ -19,14 +19,11 @@ brew install ghc
 brew install ghq
 brew install git
 brew install go
-brew install heroku-toolbelt
 brew install hub
 brew install nvm
 brew install peco
 brew install pyenv
 brew install reattach-to-user-namespace
-brew install sbt
-brew install scala
 brew install sqlite
 brew install tig
 brew install tmux
@@ -55,16 +52,13 @@ brew cask install caffeine
 brew cask install chefdk
 brew cask install dropbox
 brew cask install firefox
-brew cask install flash
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
-brew cask install karabiner
 brew cask install qlmarkdown
 brew cask install quicksilver
 brew cask install slack
 brew cask install sourcetree
-brew cask install synology-cloud-station-drive
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vmware-fusion
