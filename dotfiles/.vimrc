@@ -10,7 +10,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'bling/vim-airline'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'derekwyatt/vim-scala'
@@ -56,6 +55,8 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'vim-ruby/vim-ruby'
 
 call neobundle#end()
