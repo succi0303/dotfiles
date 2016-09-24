@@ -56,7 +56,6 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
 brew cask install qlmarkdown
-brew cask install quicksilver
 brew cask install slack
 brew cask install sourcetree
 brew cask install vagrant
