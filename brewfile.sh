@@ -15,6 +15,7 @@ echo "install brew-packages"
 brew install ag
 brew install ctags
 brew install curl
+brew install elixir
 brew install ghc
 brew install ghq
 brew install git
