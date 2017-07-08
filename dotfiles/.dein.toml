@@ -11,6 +11,9 @@ repo = 'cohama/vim-smartinput-endwise'
 repo = 'deton/jasegment.vim'
 
 [[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
 repo = 'fuenor/qfixgrep'
 
 [[plugins]]
@@ -27,9 +30,6 @@ repo ='hail2u/vim-css3-syntax'
 
 [[plugins]]
 repo ='kana/vim-smartinput'
-
-[[plugins]]
-repo ='Lokaltog/vim-easymotion'
 
 [[plugins]]
 repo ='mattn/emmet-vim'

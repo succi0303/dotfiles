@@ -169,8 +169,30 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 " vim-easymothon
-let g:EasyMotion_leader_key=";"
-let g:EasyMotion_grouping=1
+let g:EasyMotion_startofline = 0
+let g:EasyMotion_smartcase = 1
+" <Leader>f{char} to move to {char}
+map <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" <Leader>s{char}{char} to move to {char}{char}
+map <Leader>s <Plug>(easymotion-bd-f2)
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+" Move to Line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+" n-character search
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+"hjkl
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>n <Plug>(easymotion_linebackward)
 
 " airline
 let g:airline#extensions#tabline#enabled=1
