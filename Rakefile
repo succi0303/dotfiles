@@ -41,16 +41,17 @@ namespace :vim do
   directory snippet_dir = "#{ENV['HOME']}/.vim/vim_snippets"
   directory bundle_dir = "#{ENV['HOME']}/.vim/bundle"
 
-  task :setup => [backup_dir, snippet_dir, :neobundle] do
+  desc 'Setup for vim'
+  task :setup => [backup_dir, snippet_dir, :dein] do
     puts 'vimのセットアップを完了しました。'
   end
 
-  task :neobundle => bundle_dir do
-    if File.exists? "#{bundle_dir}/neobundle.vim"
-      puts 'neobundle.vimが既に存在します。'
-    else
-      sh "git clone https://github.com/Shougo/neobundle.vim #{bundle_dir}/neobundle.vim"
-      puts 'neobundle.vimをインストールしました。'
+  task :dein => bundle_dir do
+    if File.exists? "#{bundle_dir}/dein.vim"
+      puts 'dein.vimがすでに存在します。'
+   else
+       sh "git clone https://github.com/Shougo/dein.vim #{bundle_dir}/dein.vim"
+       puts 'dein.vimをインストールしました。'
     end
   end
 end

@@ -1,0 +1,89 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'chriskempson/vim-tomorrow-theme'
+
+[[plugins]]
+repo = 'cohama/vim-smartinput-endwise'
+
+[[plugins]]
+repo = 'deton/jasegment.vim'
+
+[[plugins]]
+repo = 'fuenor/qfixgrep'
+
+[[plugins]]
+repo ='fuenor/qfixhowm'
+
+[[plugins]]
+repo ='godlygeek/tabular'
+
+[[plugins]]
+repo ='gregsexton/gitv'
+
+[[plugins]]
+repo ='hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo ='kana/vim-smartinput'
+
+[[plugins]]
+repo ='Lokaltog/vim-easymotion'
+
+[[plugins]]
+repo ='mattn/emmet-vim'
+
+[[plugins]]
+repo ='nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo ='othree/html5.vim'
+
+[[plugins]]
+repo ='pangloss/vim-javascript'
+
+[[plugins]]
+repo ='scrooloose/nerdtree'
+
+[[plugins]]
+repo ='scrooloose/syntastic'
+
+[[plugins]]
+repo ='Shougo/neocomplete'
+
+[[plugins]]
+repo ='Shougo/neosnippet'
+
+[[plugins]]
+repo ='Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo ='Shougo/vim-vcs'
+
+[[plugins]]
+repo ='Shougo/vimfiler'
+
+[[plugins]]
+repo ='Shougo/vimshell'
+
+[[plugins]]
+repo ='thinca/vim-qfreplace'
+
+[[plugins]]
+repo ='tpope/vim-fugitive'
+
+[[plugins]]
+repo ='tpope/vim-markdown'
+
+[[plugins]]
+repo ='tpope/vim-surround'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo ='vim-ruby/vim-ruby'

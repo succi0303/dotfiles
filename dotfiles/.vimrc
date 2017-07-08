@@ -1,70 +1,25 @@
-" neobundle
+" dein.vim
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.vim/bundle/dein.vim
 
-set nocompatible 
+if dein#load_state(expand('~/.vim/bundle'))
+  call dein#begin(expand('~/.vim/bundle'))
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call dein#load_toml(expand('~/.dein.toml'), {'lazy': 0})
+  call dein#load_toml(expand('~/.dein_lazy.toml'), {'lazy': 1})
+
+  call dein#end()
+  call dein#save_state()
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'cohama/vim-smartinput-endwise'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'deton/jasegment.vim'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'fuenor/JpFormat.vim'
-NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'fuenor/qfixhowm'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'h1mesuke/unite-outline'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'kana/vim-smartinput'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'Konfekt/FastFold'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make',
-      \     'unix' : 'gmake',
-      \ },
-      \}
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'szw/vim-tags'
-NeoBundle 'thinca/vim-qfreplace'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'vim-ruby/vim-ruby'
-
-call neobundle#end()
+if dein#check_install()
+  call dein#install()
+endif
 
 filetype plugin indent on
-NeoBundleCheck
+syntax enable
 
 set encoding=UTF-8
 set fileencoding=UTF-8

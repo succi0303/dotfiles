@@ -1,0 +1,14 @@
+[[plugins]]
+repo = 'kannokanno/previm'
+depends = 'open-browser.vim'
+on_cmd = 'PrevimOpen'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
