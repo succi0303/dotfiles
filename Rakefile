@@ -38,7 +38,6 @@ end
 
 namespace :vim do
   directory backup_dir = "#{ENV['HOME']}/.vim/backup"
-  directory snippet_dir = "#{ENV['HOME']}/.vim/vim_snippets"
   directory bundle_dir = "#{ENV['HOME']}/.vim/bundle"
 
   desc 'Setup for vim'

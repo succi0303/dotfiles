@@ -50,12 +50,6 @@ repo ='scrooloose/syntastic'
 repo ='Shougo/neocomplete'
 
 [[plugins]]
-repo ='Shougo/neosnippet'
-
-[[plugins]]
-repo ='Shougo/neosnippet-snippets'
-
-[[plugins]]
 repo ='Shougo/vim-vcs'
 
 [[plugins]]
