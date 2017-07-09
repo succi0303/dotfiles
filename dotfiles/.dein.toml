@@ -20,9 +20,6 @@ repo = 'fuenor/qfixgrep'
 repo ='fuenor/qfixhowm'
 
 [[plugins]]
-repo ='gregsexton/gitv'
-
-[[plugins]]
 repo ='hail2u/vim-css3-syntax'
 
 [[plugins]]
