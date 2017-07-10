@@ -41,7 +41,7 @@ namespace :vim do
   directory bundle_dir = "#{ENV['HOME']}/.vim/bundle"
 
   desc 'Setup for vim'
-  task :setup => [backup_dir, snippet_dir, :dein] do
+  task :setup => [backup_dir, :dein] do
     puts 'vimのセットアップを完了しました。'
   end
 
