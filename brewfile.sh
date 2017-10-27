@@ -18,6 +18,7 @@ brew install hub
 brew install nvm
 brew install peco
 brew install pyenv
+brew install rbenv
 brew install reattach-to-user-namespace
 brew install sqlite
 brew install tig
@@ -25,13 +26,6 @@ brew install tmux
 brew install vim --with-lua
 brew install wget
 brew install zsh
-
-echo "install ruby environment"
-brew install libyaml
-brew install openssl
-brew install rbenv
-brew install readline
-brew install ruby-build
 
 echo "for nokogiri"
 brew install libxml2
