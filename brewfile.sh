@@ -47,7 +47,6 @@ brew cask install qlmarkdown
 brew cask install slack
 brew cask install sourcetree
 brew cask install vagrant
-brew cask install virtualbox
 brew cask install vmware-fusion
 
 echo "remove outdated versions from the cellar"
