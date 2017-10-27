@@ -6,13 +6,7 @@ brew update
 echo "upgrade already-installed packages"
 brew upgrade
 
-echo "add repositories"
-brew tap homebrew/binary
-brew tap homebrew/versions
-brew tap caskroom/cask
-
 echo "install brew-packages"
-brew install ag
 brew install ctags
 brew install curl
 brew install elixir
@@ -40,15 +34,14 @@ brew install readline
 brew install ruby-build
 
 echo "for nokogiri"
-brew tap homebrew/dupes
 brew install libxml2
 brew install libxslt
 brew install libiconv
 link libxml2 libxslt libiconv
 
 echo "install cask-packages"
+brew tap caskroom/cask
 brew cask install appcleaner
-brew cask install atom
 brew cask install caffeine
 brew cask install chefdk
 brew cask install docker
@@ -56,7 +49,6 @@ brew cask install dropbox
 brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
-brew cask install java
 brew cask install qlmarkdown
 brew cask install slack
 brew cask install sourcetree
