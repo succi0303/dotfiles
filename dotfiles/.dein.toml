@@ -17,55 +17,55 @@ repo = 'easymotion/vim-easymotion'
 repo = 'fuenor/qfixgrep'
 
 [[plugins]]
-repo ='fuenor/qfixhowm'
+repo = 'fuenor/qfixhowm'
 
 [[plugins]]
-repo ='hail2u/vim-css3-syntax'
+repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]
-repo ='kana/vim-smartinput'
+repo = 'kana/vim-smartinput'
 
 [[plugins]]
-repo ='mattn/emmet-vim'
+repo = 'mattn/emmet-vim'
 
 [[plugins]]
-repo ='nathanaelkane/vim-indent-guides'
+repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
-repo ='othree/html5.vim'
+repo = 'othree/html5.vim'
 
 [[plugins]]
-repo ='pangloss/vim-javascript'
+repo = 'pangloss/vim-javascript'
 
 [[plugins]]
 repo = 'rakr/vim-one'
 
 [[plugins]]
-repo ='scrooloose/nerdtree'
+repo = 'scrooloose/nerdtree'
 
 [[plugins]]
-repo ='scrooloose/syntastic'
+repo = 'scrooloose/syntastic'
 
 [[plugins]]
-repo ='Shougo/neocomplete'
+repo = 'Shougo/neocomplete'
 
 [[plugins]]
-repo ='Shougo/vimfiler'
+repo = 'Shougo/vimfiler'
 
 [[plugins]]
-repo ='Shougo/vimshell'
+repo = 'Shougo/vimshell'
 
 [[plugins]]
-repo ='thinca/vim-qfreplace'
+repo = 'thinca/vim-qfreplace'
 
 [[plugins]]
-repo ='tpope/vim-fugitive'
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo ='tpope/vim-markdown'
+repo = 'tpope/vim-markdown'
 
 [[plugins]]
-repo ='tpope/vim-surround'
+repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -74,4 +74,4 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo ='vim-ruby/vim-ruby'
+repo = 'vim-ruby/vim-ruby'
