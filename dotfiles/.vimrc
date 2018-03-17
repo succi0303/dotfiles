@@ -96,7 +96,7 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme Tomorrow-Night-Bright
+colorscheme one
 syntax on
 
 " プラグイン
@@ -186,7 +186,7 @@ let g:airline#extentions#tabline#show_buffers=0
 let g:airline#extensions#tabline#tab_nr_type=1
 let g:airline#extensions#tabline#fnamemod=":t"
 
-let g:airline_theme='luna'
+let g:airline_theme='one'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif

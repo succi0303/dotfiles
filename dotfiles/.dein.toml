@@ -38,6 +38,9 @@ repo ='othree/html5.vim'
 repo ='pangloss/vim-javascript'
 
 [[plugins]]
+repo = 'rakr/vim-one'
+
+[[plugins]]
 repo ='scrooloose/nerdtree'
 
 [[plugins]]
