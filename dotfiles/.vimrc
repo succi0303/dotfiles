@@ -232,3 +232,27 @@ let QFixHowm_Template = [
   \]
 let QFixHowm_SaveTime = -1
 let QFixMRU_Entries = 50
+
+" vimoutliner and more.
+" 連続インデント
+vnoremap < <gv
+vnoremap > >gv
+" 選択領域の上下移動
+function! s:move_block(d) range
+  let cnt = a:lastline - a:firstline
+  if a:d ==# 'u'
+    let sign = '-'
+    let cnt = 2
+  else
+    let sign = '+'
+    let cnt += 1
+  endif
+  execute printf('%d,%dmove%s%d', a:firstline, a:lastline, sign, cnt)
+endfunction
+vnoremap <C-n> :call <SID>move_block('d')<Cr>==gv
+vnoremap <C-p> :call <SID>move_block('u')<Cr>==gv
+" foldCC
+set foldtext=FoldCCtext()
+" vim-partedit
+vnoremap <C-l> :Partedit<CR>
+noremap <C-h> :ParteditEnd<CR>

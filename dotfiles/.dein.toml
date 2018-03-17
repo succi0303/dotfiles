@@ -26,6 +26,15 @@ repo = 'hail2u/vim-css3-syntax'
 repo = 'kana/vim-smartinput'
 
 [[plugins]]
+repo = 'kana/vim-textobj-indent'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'LeafCage/foldCC'
+
+[[plugins]]
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
@@ -56,6 +65,9 @@ repo = 'Shougo/vimfiler'
 repo = 'Shougo/vimshell'
 
 [[plugins]]
+repo = 'thinca/vim-partedit'
+
+[[plugins]]
 repo = 'thinca/vim-qfreplace'
 
 [[plugins]]
@@ -75,3 +87,6 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
+
+[[plugins]]
+repo = 'vimoutliner/vimoutliner'
