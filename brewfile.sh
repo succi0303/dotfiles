@@ -48,6 +48,7 @@ brew cask install slack
 brew cask install sourcetree
 brew cask install vagrant
 brew cask install vmware-fusion
+brew cask install workflowy
 
 echo "remove outdated versions from the cellar"
 brew cleanup
