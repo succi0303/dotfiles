@@ -96,7 +96,7 @@ set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " カラースキーマ
-colorscheme one
+colorscheme one-dark
 syntax on
 
 " プラグイン
