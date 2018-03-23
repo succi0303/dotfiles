@@ -81,7 +81,8 @@ function _update_vcs_info_msg() {
 }
 
 add-zsh-hook precmd _update_vcs_info_msg
-PROMPT="%{$fg[cyan]%}%n$%{${reset_color}%} %1(v|%F{red}%1v%f|)"
+PROMPT="%{$fg[cyan]%}%n@%m$%{${reset_color}%} %1(v|%F{red}%1v%f|)
+> "
 RPROMPT="%{$fg[cyan]%}[%~]%{${reset_color}%}"
 
 # エイリアス
