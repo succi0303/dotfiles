@@ -233,6 +233,11 @@ let QFixHowm_Template = [
 let QFixHowm_SaveTime = -1
 let QFixMRU_Entries = 50
 
+" simplenote.vim
+if filereadable($HOME . '/.simplenoterc')
+  source ~/.simplenoterc
+endif
+
 " vimoutliner and more.
 " 連続インデント
 vnoremap < <gv

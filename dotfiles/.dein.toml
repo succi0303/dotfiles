@@ -38,6 +38,9 @@ repo = 'LeafCage/foldCC'
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
+repo = 'mrtazz/simplenote.vim'
+
+[[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
