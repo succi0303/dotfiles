@@ -157,3 +157,14 @@ if [ -d /usr/local/opt/nvm ] ; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
 fi
+
+## peco & ghq
+function peco-ghq () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ] ; then
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-ghq
+bindkey '^]' peco-ghq
