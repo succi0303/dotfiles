@@ -236,11 +236,6 @@ if isdirectory(my_howm_dir)
     let QFixMRU_Entries = 50
 endif
 
-" simplenote.vim
-if filereadable($HOME . '/.simplenoterc')
-  source ~/.simplenoterc
-endif
-
 " vimoutliner and more.
 " 連続インデント
 vnoremap < <gv
