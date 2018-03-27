@@ -218,20 +218,23 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
 " qfixhowm
-let howm_dir = '~/Dropbox/howm'
-let howm_fileencoding = 'utf-8'
-let howm_fileformat = 'unix'
-let QFixWin_EnableMode = 1
-let QFix_UseLocationList = 1
-let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
-let QFixHowm_FileType = 'markdown'
-let QFixHowm_Title = '#'
-let QFixHowm_Template = [
-  \"# %TAG%",
-  \""
-  \]
-let QFixHowm_SaveTime = -1
-let QFixMRU_Entries = 50
+let my_howm_dir = expand('~/.ghq/bitbucket.org/succi0303/howm')
+if isdirectory(my_howm_dir)
+    let howm_dir = my_howm_dir
+    let howm_fileencoding = 'utf-8'
+    let howm_fileformat = 'unix'
+    let QFixWin_EnableMode = 1
+    let QFix_UseLocationList = 1
+    let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.md'
+    let QFixHowm_FileType = 'markdown'
+    let QFixHowm_Title = '#'
+    let QFixHowm_Template = [
+      \"# %TAG%",
+      \""
+      \]
+    let QFixHowm_SaveTime = -1
+    let QFixMRU_Entries = 50
+endif
 
 " simplenote.vim
 if filereadable($HOME . '/.simplenoterc')
