@@ -169,3 +169,17 @@ function peco-ghq () {
 }
 zle -N peco-ghq
 bindkey '^]' peco-ghq
+
+## ssh-agent
+if [ -e ~/.ssh-agent-info ] ; then
+  source ~/.ssh-agent-info
+fi
+ssh-add -l >&/dev/null
+if [ $? = 2 ] ; then
+  ssh-agent >~/.ssh-agent-info
+  source ~/.ssh-agent-info
+fi
+if ssh-add -l >&/dev/null ; then
+else
+  ssh-add
+fi
