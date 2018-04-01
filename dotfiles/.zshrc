@@ -176,10 +176,12 @@ if [ -e ~/.ssh-agent-info ] ; then
 fi
 ssh-add -l >&/dev/null
 if [ $? = 2 ] ; then
+  echo "ssh-agent: restart."
   ssh-agent >~/.ssh-agent-info
   source ~/.ssh-agent-info
 fi
 if ssh-add -l >&/dev/null ; then
+  echo "ssh-agent: Identity is already stored."
 else
   ssh-add
 fi
