@@ -38,6 +38,7 @@ brew tap caskroom/cask
 brew cask install appcleaner
 brew cask install caffeine
 brew cask install chefdk
+brew cask install clipy
 brew cask install docker
 brew cask install dropbox
 brew cask install firefox
