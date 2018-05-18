@@ -125,11 +125,6 @@ fi
 ## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## hub
-if builtin command -v hub > /dev/null; then
-  eval "$(hub alias -s)"
-fi
-
 ## peco & ghq
 function peco-ghq () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
