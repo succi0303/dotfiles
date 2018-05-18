@@ -115,12 +115,6 @@ if [ -d ~/.zsh/zsh-completions ] ; then
   compinit
 fi
 
-## rbenv
-if [ -d ~/.rbenv ] ; then
-  export PATH="~/.rbenv/bin":"~/.rbenv/shims":$PATH
-  eval "$(rbenv init - zsh)"
-fi
-
 ## vim
 if builtin command -v /usr/local/bin/vim > /dev/null; then
   export EDITOR="/usr/local/bin/vim"
@@ -131,31 +125,9 @@ fi
 ## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## travis gem
-if [ -f ~/.travis/travis.sh ]; then
-  source ~/.travis/travis.sh
-fi
-
-## go
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-
 ## hub
 if builtin command -v hub > /dev/null; then
   eval "$(hub alias -s)"
-fi
-
-## pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ] ; then
-  export PATH=${PYENV_ROOT}/bin:$PATH
-  eval "$(pyenv init -)"
-fi
-
-## nvm
-if [ -d /usr/local/opt/nvm ] ; then
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
 fi
 
 ## peco & ghq
