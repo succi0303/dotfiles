@@ -9,7 +9,6 @@ brew upgrade
 echo "install brew-packages"
 brew install ctags
 brew install curl
-brew install elixir
 brew install ghq
 brew install git
 brew install go
