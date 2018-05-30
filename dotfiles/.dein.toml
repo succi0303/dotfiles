@@ -41,9 +41,6 @@ repo = 'rakr/vim-one'
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
-
-[[plugins]]
 repo = 'Shougo/neocomplete'
 
 [[plugins]]
@@ -75,4 +72,7 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
 
