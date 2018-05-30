@@ -29,9 +29,6 @@ repo = 'kana/vim-textobj-indent'
 repo = 'kana/vim-textobj-user'
 
 [[plugins]]
-repo = 'LeafCage/foldCC'
-
-[[plugins]]
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
@@ -79,5 +76,3 @@ repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
 
-[[plugins]]
-repo = 'vimoutliner/vimoutliner'
