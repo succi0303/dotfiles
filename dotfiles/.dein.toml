@@ -20,9 +20,6 @@ repo = 'fuenor/qfixgrep'
 repo = 'fuenor/qfixhowm'
 
 [[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-
-[[plugins]]
 repo = 'kana/vim-smartinput'
 
 [[plugins]]
@@ -39,12 +36,6 @@ repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-
-[[plugins]]
-repo = 'othree/html5.vim'
-
-[[plugins]]
-repo = 'pangloss/vim-javascript'
 
 [[plugins]]
 repo = 'rakr/vim-one'
