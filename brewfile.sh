@@ -30,7 +30,6 @@ brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install qlmarkdown
-brew cask install slack
 brew cask install vagrant
 brew cask install workflowy
 
