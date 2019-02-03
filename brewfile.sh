@@ -26,13 +26,13 @@ brew cask install appcleaner
 brew cask install clipy
 brew cask install docker
 brew cask install dropbox
+brew cask install dynalist
 brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install qlmarkdown
 brew cask install slack
 brew cask install vagrant
-brew cask install workflowy
 
 echo "remove outdated versions from the cellar"
 brew cleanup
