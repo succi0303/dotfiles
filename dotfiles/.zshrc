@@ -98,7 +98,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lsa='ls -al'
 
-alias nvim='docker run -it --rm -v $(pwd):/usr/src/nvim:cached -v ~/.gitconfig:/root/.gitconfig succi0303/my-neovim'
+alias nvim='docker run -it --rm -v $(pwd):/root/go/src/nvim:cached -v ~/.gitconfig:/root/.gitconfig succi0303/my-neovim'
 
 # 外部ツール設定
 ## auto-fu
