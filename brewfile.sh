@@ -11,6 +11,7 @@ brew install ctags
 brew install curl
 brew install ghq
 brew install git
+brew install grip
 brew install peco
 brew install reattach-to-user-namespace
 brew install sqlite
