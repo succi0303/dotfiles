@@ -24,7 +24,6 @@ brew install zsh
 echo "install cask-packages"
 brew tap caskroom/cask
 brew cask install appcleaner
-brew cask install clipy
 brew cask install docker
 brew cask install dropbox
 brew cask install dynalist
