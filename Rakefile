@@ -58,8 +58,16 @@ end
 namespace :zsh do
   directory zsh_dir = "#{ENV['HOME']}/.zsh"
 
-  task :setup => [zsh_dir, :zsh_completions, :zsh_syntax_highlighting] do
+  task :setup => [zsh_dir, :zsh_autosuggestions, :zsh_completions, :zsh_syntax_highlighting] do
     puts 'zshのセットアップを完了しました。'
+  end
+
+  task :zsh_autosuggestions do
+    if File.exists? "#{zsh_dir}/zsh-autosuggestions"
+      puts "zsh-autosuggestionsが既に存在します。"
+    else
+      sh "git clone https://github.com/zsh-users/zsh-autosuggestions #{zsh_dir}/zsh-autosuggestions"
+    end
   end
 
   task :zsh_completions do

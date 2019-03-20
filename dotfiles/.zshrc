@@ -111,6 +111,11 @@ if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   zstyle ':completion:*' completer _oldlist _complete
 fi
 
+## zsh-autosuggestions
+if [ -d ~/.zsh/zsh-autosuggestions ] ; then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 ## zsh-completions
 if [ -d ~/.zsh/zsh-completions ] ; then
   fpath=(~/.zsh/zsh-completions/src $fpath)
