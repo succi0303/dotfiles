@@ -58,7 +58,7 @@ end
 namespace :zsh do
   directory zsh_dir = "#{ENV['HOME']}/.zsh"
 
-  task :setup => [zsh_dir, :zsh_completions] do
+  task :setup => [zsh_dir, :zsh_completions, :zsh_syntax_highlighting] do
     puts 'zshのセットアップを完了しました。'
   end
 
@@ -67,6 +67,14 @@ namespace :zsh do
       puts 'zsh-completionsが既に存在します。'
     else
       sh "git clone https://github.com/zsh-users/zsh-completions #{zsh_dir}/zsh-completions"
+    end
+  end
+
+  task :zsh_syntax_highlighting do
+    if File.exists? "#{zsh_dir}/zsh-syntax-highlighting"
+      puts "zsh-syntax-highlightingが既に存在します。"
+    else
+      sh "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git #{zsh_dir}/zsh-syntax-highlighting"
     end
   end
 end

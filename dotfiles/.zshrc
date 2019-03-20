@@ -117,6 +117,11 @@ if [ -d ~/.zsh/zsh-completions ] ; then
   compinit
 fi
 
+## zsh-syntax-highlighting
+if [ -d ~/.zsh/zsh-syntax-highlighting ] ; then
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 ## vim
 if builtin command -v /usr/local/bin/vim > /dev/null; then
   export EDITOR="/usr/local/bin/vim"
