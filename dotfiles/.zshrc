@@ -127,6 +127,11 @@ if [ -d ~/.zsh/zsh-syntax-highlighting ] ; then
   source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+## z
+if [ -d ~/.zsh/z  ] ; then
+  source ~/.zsh/z/z.sh
+fi
+
 ## vim
 if builtin command -v /usr/local/bin/vim > /dev/null; then
   export EDITOR="/usr/local/bin/vim"
@@ -157,6 +162,19 @@ function peco-ghq () {
 }
 zle -N peco-ghq
 bindkey '^gr' peco-ghq
+
+## peco & z
+function peco-z {
+  local res=$(z | sort -rn | cut -c 12- | peco)
+  if [ -n "$res" ] ; then
+    BUFFER="cd $res"
+    zle accept-line
+  else
+    return 1
+  fi
+  }
+  zle -N peco-z
+  bindkey '^gz' peco-z
 
 ## ssh-agent
 if [ -e ~/.ssh-agent-info ] ; then
