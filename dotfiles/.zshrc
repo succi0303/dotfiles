@@ -137,6 +137,15 @@ fi
 ## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+## peco & history
+function peco-history () {
+  BUFFER=`history -n 1 | tail -r | awk '!a[$0]' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
+}
+zle -N peco-history
+bindkey '^gh' peco-history
+
 ## peco & ghq
 function peco-ghq () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
@@ -147,7 +156,7 @@ function peco-ghq () {
   zle clear-screen
 }
 zle -N peco-ghq
-bindkey '^]' peco-ghq
+bindkey '^gr' peco-ghq
 
 ## ssh-agent
 if [ -e ~/.ssh-agent-info ] ; then
