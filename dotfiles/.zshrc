@@ -106,7 +106,7 @@ fi
 zplug load --verbose
 
 # anyframe
-export FZF_DEFAULT_OPTS="--extended --cycle --ansi --select-1"
+export FZF_DEFAULT_OPTS="--extended --cycle --ansi --select-1 --reverse"
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ":anyframe:selector:" use fzf-tmux
