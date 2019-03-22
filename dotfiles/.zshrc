@@ -79,11 +79,6 @@ if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   zstyle ':completion:*' completer _oldlist _complete
 fi
 
-## z
-if [ -d ~/.zsh/z  ] ; then
-  source ~/.zsh/z/z.sh
-fi
-
 ## vim
 if builtin command -v /usr/local/bin/vim > /dev/null; then
   export EDITOR="/usr/local/bin/vim"
@@ -144,8 +139,11 @@ else
   ssh-add
 fi
 
+if [ ! -d ~/.zplug ] ; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+fi
+
 source ~/.zplug/init.zsh
-zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
@@ -153,6 +151,8 @@ zplug "zsh-users/zsh-syntax-highlighting"
 
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
+zplug "rupa/z", use:zsh
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]"

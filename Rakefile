@@ -55,46 +55,6 @@ namespace :vim do
   end
 end
 
-namespace :zsh do
-  directory zsh_dir = "#{ENV['HOME']}/.zsh"
-
-  task :setup => [zsh_dir, :zsh_autosuggestions, :zsh_completions, :zsh_syntax_highlighting, :z] do
-    puts 'zshのセットアップを完了しました。'
-  end
-
-  task :zsh_autosuggestions do
-    if File.exists? "#{zsh_dir}/zsh-autosuggestions"
-      puts "zsh-autosuggestionsが既に存在します。"
-    else
-      sh "git clone https://github.com/zsh-users/zsh-autosuggestions #{zsh_dir}/zsh-autosuggestions"
-    end
-  end
-
-  task :zsh_completions do
-    if File.exists? "#{zsh_dir}/zsh-completions"
-      puts 'zsh-completionsが既に存在します。'
-    else
-      sh "git clone https://github.com/zsh-users/zsh-completions #{zsh_dir}/zsh-completions"
-    end
-  end
-
-  task :zsh_syntax_highlighting do
-    if File.exists? "#{zsh_dir}/zsh-syntax-highlighting"
-      puts "zsh-syntax-highlightingが既に存在します。"
-    else
-      sh "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git #{zsh_dir}/zsh-syntax-highlighting"
-    end
-  end
-
-  task :z do
-    if File.exists? "#{zsh_dir}/z"
-      puts "zが既に存在します。"
-    else
-      sh "git clone https://github.com/rupa/z.git #{zsh_dir}/z"
-    end
-    end
-end
-
 namespace :nvm do
   directory nvm_dir = "#{ENV['HOME']}/.nvm"
 
