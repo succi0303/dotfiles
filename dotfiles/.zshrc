@@ -49,10 +49,35 @@ setopt no_beep
 setopt no_nomatch
 setopt prompt_subst
 
+# cdr
+
+autoload -Uz add-zsh-hook
+autoload -Uz chpwd_recent_dirs cdr
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-default true
+
+# others
+
+setopt correct
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
-setopt correct
+setopt auto_list
+setopt auto_menu
+setopt list_packed
+setopt list_types
+setopt no_flow_control
+setopt print_eight_bit
+setopt rec_exact
+setopt auto_remove_slash
+setopt complete_in_word
+setopt glob
+setopt glob_complete
+setopt extended_glob
+setopt mark_dirs
+setopt numeric_glob_sort
+setopt magic_equal_subst
+setopt always_last_prompt
 
 stty erase ^H
 bindkey "^[[3~" delete-char
@@ -62,14 +87,7 @@ select-word-style default
 zstyle ':zle:*' word-chars "_-./:@"
 zstyle ':zle:*' word-style unspecified
 
-setopt no_flow_control
 
-
-
-autoload -Uz add-zsh-hook
-autoload -Uz chpwd_recent_dirs cdr
-add-zsh-hook chpwd chpwd_recent_dirs
-zstyle ':chpwd:*' recent-dirs-default true
 
 # alias
 alias rm='rm -i'
