@@ -151,8 +151,8 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting"
 
-zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure"
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]"
