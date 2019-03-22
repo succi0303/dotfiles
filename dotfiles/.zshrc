@@ -80,27 +80,6 @@ fi
 ## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## ssh-agent
-if [ -e ~/.ssh-agent-info ] ; then
-  source ~/.ssh-agent-info
-fi
-ssh-add -l >&/dev/null
-if [ $? = 2 ] ; then
-  echo "ssh-agent: restart."
-  ssh-agent >~/.ssh-agent-info
-  source ~/.ssh-agent-info
-fi
-if ssh-add -l >&/dev/null ; then
-  echo "ssh-agent: Identity is already stored."
-else
-  ssh-add
-fi
-
-if [[ ! -d ~/.zplug ]] ; then
-  git clone https://github.com/zplug/zplug ~/.zplug
-  source ~/.zplug/init.zsh && zplug update --self
-fi
-
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -114,6 +93,7 @@ zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug "mollifier/anyframe"
 zplug "motemen/ghq", as:command, from:gh-r
+zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "rupa/z", use:zsh
 
 if ! zplug check --verbose; then
@@ -122,6 +102,8 @@ if ! zplug check --verbose; then
     echo; zplug install
   fi
 fi
+
+zplug load --verbose
 
 # anyframe
 export FZF_DEFAULT_OPTS="--extended --cycle --ansi --select-1"
@@ -134,4 +116,7 @@ bindkey '^gk' anyframe-widget-kill
 bindkey '^gb' anyframe-widget-insert-git-branch
 bindkey '^gc' anyframe-widget-cdr
 
-zplug load --verbose
+
+# ssh-agent
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent lifetime 48h
