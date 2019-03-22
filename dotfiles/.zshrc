@@ -111,22 +111,6 @@ if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
   zstyle ':completion:*' completer _oldlist _complete
 fi
 
-## zsh-autosuggestions
-if [ -d ~/.zsh/zsh-autosuggestions ] ; then
-  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-## zsh-completions
-if [ -d ~/.zsh/zsh-completions ] ; then
-  fpath=(~/.zsh/zsh-completions/src $fpath)
-  compinit
-fi
-
-## zsh-syntax-highlighting
-if [ -d ~/.zsh/zsh-syntax-highlighting ] ; then
-  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
 ## z
 if [ -d ~/.zsh/z  ] ; then
   source ~/.zsh/z/z.sh
@@ -191,3 +175,22 @@ if ssh-add -l >&/dev/null ; then
 else
   ssh-add
 fi
+
+source ~/.zplug/init.zsh
+zplug "zplug/zplug", hook-build: 'zplug --self-manage'
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
+
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure"
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]"
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load --verbose
