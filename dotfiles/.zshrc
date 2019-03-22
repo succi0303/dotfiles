@@ -69,15 +69,6 @@ alias lsa='ls -al'
 alias nvim='docker run -it --rm -v $(pwd):/root/go/src/nvim:cached -v ~/.gitconfig:/root/.gitconfig -v ~/.ssh:/root/.ssh succi0303/my-neovim'
 
 # 外部ツール設定
-## auto-fu
-if [ -f ~/.zsh/auto-fu.zsh/auto-fu.zsh ]; then
-  source ~/.zsh/auto-fu.zsh/auto-fu.zsh
-  function zle-line-init() {
-    auto-fu-init
-  }
-  zle -N zle-line-init
-  zstyle ':completion:*' completer _oldlist _complete
-fi
 
 ## vim
 if builtin command -v /usr/local/bin/vim > /dev/null; then
