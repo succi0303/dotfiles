@@ -133,11 +133,14 @@ if ! zplug check --verbose; then
 fi
 
 # anyframe
-export FZF_DEFALT_OPTS="--extended --cycle --ansi --select-1"
+export FZF_DEFAULT_OPTS="--extended --cycle --ansi --select-1"
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ":anyframe:selector:" use fzf-tmux
 bindkey '^gr' anyframe-widget-cd-ghq-repository
 bindkey '^gh' anyframe-widget-put-history
 bindkey '^gk' anyframe-widget-kill
 bindkey '^gb' anyframe-widget-insert-git-branch
+bindkey '^gc' anyframe-widget-cdr
 
 zplug load --verbose
