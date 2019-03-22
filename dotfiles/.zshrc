@@ -7,15 +7,17 @@ export PATH=$PATH:/usr/sbin
 autoload -Uz colors
 colors
 
-autoload -Uz compinit
-compinit
-
 bindkey -e
 
 # history
 
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt hist_no_store
+setopt hist_verify
 setopt share_history
-setopt histignorealldups
+setopt extended_history
 HISTSIZE=2000
 SAVEHIST=1000000
 HISTFILE=~/.zhistory
@@ -26,6 +28,26 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey '^p' history-beginning-search-backward-end
 bindkey '^n' history-beginning-search-forward-end
+
+bindkey '^r' history-incremental-pattern-search-backward
+bindkey '^s' history-incremental-pattern-search-forward
+
+# completion
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' format '%B%F{yellow}%d%f%b'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
+zstyle ':completion:*' keep-prefix
+zstyle ':completion:*' recent-dirs-insert both
+
+setopt menu_complete
+setopt no_beep
+setopt no_nomatch
+setopt prompt_subst
 
 setopt auto_cd
 setopt auto_pushd
@@ -42,12 +64,6 @@ zstyle ':zle:*' word-style unspecified
 
 setopt no_flow_control
 
-zstyle ':completion:*:default' menu select
-setopt menu_complete
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-bindkey '^r' history-incremental-pattern-search-backward
-bindkey '^s' history-incremental-pattern-search-forward
 
 
 autoload -Uz add-zsh-hook
