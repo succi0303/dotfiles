@@ -12,12 +12,20 @@ compinit
 
 bindkey -e
 
+# history
+
 setopt share_history
 setopt histignorealldups
 HISTSIZE=2000
 SAVEHIST=1000000
 HISTFILE=~/.zhistory
 DIRSTACKSIZE=20
+
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^p' history-beginning-search-backward-end
+bindkey '^n' history-beginning-search-forward-end
 
 setopt auto_cd
 setopt auto_pushd
@@ -41,11 +49,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 bindkey '^r' history-incremental-pattern-search-backward
 bindkey '^s' history-incremental-pattern-search-forward
 
-autoload -Uz history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey '^p' history-beginning-search-backward-end
-bindkey '^b' history-beginning-search-forward-end
 
 autoload -Uz add-zsh-hook
 autoload -Uz chpwd_recent_dirs cdr
