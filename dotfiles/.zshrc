@@ -89,40 +89,6 @@ fi
 ## Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## peco & history
-function peco-history () {
-  BUFFER=`history -n 1 | tail -r | awk '!a[$0]' | peco`
-  CURSOR=$#BUFFER
-  zle reset-prompt
-}
-zle -N peco-history
-bindkey '^gh' peco-history
-
-## peco & ghq
-function peco-ghq () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ] ; then
-    BUFFER="cd ${selected_dir}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-ghq
-bindkey '^gr' peco-ghq
-
-## peco & z
-function peco-z {
-  local res=$(z | sort -rn | cut -c 12- | peco)
-  if [ -n "$res" ] ; then
-    BUFFER="cd $res"
-    zle accept-line
-  else
-    return 1
-  fi
-  }
-  zle -N peco-z
-  bindkey '^gz' peco-z
-
 ## ssh-agent
 if [ -e ~/.ssh-agent-info ] ; then
   source ~/.ssh-agent-info
@@ -153,6 +119,10 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
+zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
+zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+zplug "mollifier/anyframe"
+zplug "motemen/ghq", as:command, from:gh-r
 zplug "rupa/z", use:zsh
 
 if ! zplug check --verbose; then
@@ -161,5 +131,13 @@ if ! zplug check --verbose; then
     echo; zplug install
   fi
 fi
+
+# anyframe
+export FZF_DEFALT_OPTS="--extended --cycle --ansi --select-1"
+zstyle ":anyframe:selector:" use fzf-tmux
+bindkey '^gr' anyframe-widget-cd-ghq-repository
+bindkey '^gh' anyframe-widget-put-history
+bindkey '^gk' anyframe-widget-kill
+bindkey '^gb' anyframe-widget-insert-git-branch
 
 zplug load --verbose
