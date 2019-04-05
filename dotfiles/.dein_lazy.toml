@@ -1,23 +1,7 @@
 [[plugins]]
-repo = 'vim-jp/vim-go-extra'
-on_ft = 'go'
-
-[[plugins]]
 repo = 'kannokanno/previm'
 depends = 'open-browser.vim'
 on_cmd = 'PrevimOpen'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-depends = 'neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-on_source = ['unite.vim', 'vimshell.vim']
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'

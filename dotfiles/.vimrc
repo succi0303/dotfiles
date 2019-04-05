@@ -101,54 +101,6 @@ syntax on
 
 " プラグイン
 
-" neocomplete
-let g:neocomplete#enable_at_startup=1
-let g:neocomplete#enable_smart_case=1
-let g:neocomplete#sources#syntax#min_keyword_length=3
-let g:neocomplete#lock_buffer_name_pattern='\*ku\*'
-let g:neocomplete#sources#dictionary#dictionaries={
-      \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell_hist',
-      \ 'scheme' : $HOME.'.gosh_completion'
-      \ }
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns={}
-endif
-let g:neocomplete#keyword_patterns['default']='\h\w*'
-
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-if !exists('g:neocomplete#sources#omni#input_patterns')
- let g:neocomplete#sources#omni#input_patterns={}
-endif
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-" VimFiler
-nnoremap <silent> mf :<C-u>VimFiler<CR>
-nnoremap <silent> mF :<C-u>VimFilerBufferDir<CR>
-
-" VimShell
-nnoremap <silent> ms :<C-u>VimShell<CR>
-nnoremap <silent> mS :<C-u>VimShellBufferDir<CR>
-nnoremap <silent> mp :<C-u>VimShellPop<CR>
-
-" unite
-let g:unite_enable_start_insert=0
-let g:unite_enable_ignore_case=1
-let g:unite_enable_smart_case=1
-nnoremap <silent> ,l :<C-u>Unite line<CR>
-nnoremap <silent> ,b :<C-u>Unite buffer<CR>
-nnoremap <silent> ,t :<C-u>Unite tab<CR>
-nnoremap <silent> ,f :<C-u>Unite file_mru<CR>
-nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> ,r :<C-u>UniteResume search-buffer<CR>
-nnoremap <silent> ,B :<C-u>Unite bookmark<CR>
-nnoremap <silent> ,F :<C-u>Unite file<CR>
-
 " open-browser
 let g:netw_nogx=1
 nmap gx <Plug>(openbrowser-smart-search)
@@ -182,60 +134,20 @@ map <Leader>n <Plug>(easymotion_linebackward)
 
 " airline
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extentions#tabline#show_buffers=0
-let g:airline#extensions#tabline#tab_nr_type=1
-let g:airline#extensions#tabline#fnamemod=":t"
-
-let g:airline_theme='one'
+let g:airline#extensions#tabline#left_sep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
+let g:airline#extensions#tabline#formatter='default'
+"let g:airline_powerline_fonts=1
+"let g:airline_symbols_ascii=1
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+  let g:airline_symbols={}
 endif
-" powerline symbols
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
-" JpFormat
-set formatexpr=jpfmt#formatexpr()
+" fzf
 
-" vim-smartinput-endwise
-call smartinput_endwise#define_default_rules()
-
-" syntastic
-let g:syntastic_auto_loc_list=0
 
 " NERD-Tree
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMapActivateNode="<CR>"
 let file_name = expand("%:p")
 nnoremap <C-e> :NERDTreeToggle<CR>
-
-" vim-indent-guides
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=gray
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
-
-" qfixhowm
-let my_howm_dir = expand('~/.ghq/bitbucket.org/succi0303/howm')
-if isdirectory(my_howm_dir)
-    let howm_dir = my_howm_dir
-    let howm_fileencoding = 'utf-8'
-    let howm_fileformat = 'unix'
-    let QFixWin_EnableMode = 1
-    let QFix_UseLocationList = 1
-    let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.md'
-    let QFixHowm_FileType = 'markdown'
-    let QFixHowm_Title = '#'
-    let QFixHowm_Template = [
-      \"# %TAG%",
-      \""
-      \]
-    let QFixHowm_SaveTime = -1
-    let QFixMRU_Entries = 50
-endif
-
-" vim-partedit
-vnoremap <C-l> :Partedit<CR>
-noremap <C-h> :ParteditEnd<CR>
