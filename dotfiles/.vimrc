@@ -1,25 +1,20 @@
-" dein.vim
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=~/.vim/bundle/dein.vim
+" vim-plug
+call plug#begin('~/.vim/autoload/plugged')
 
-if dein#load_state(expand('~/.vim/bundle'))
-  call dein#begin(expand('~/.vim/bundle'))
+Plug 'airblade/vim-gitgutter'
+Plug 'cespare/vim-toml'
+Plug 'cohama/lexima.vim'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'easymotion/vim-easymotion'
+Plug 'kannokanno/previm'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tyru/open-browser.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-  call dein#load_toml(expand('~/.dein.toml'), {'lazy': 0})
-  call dein#load_toml(expand('~/.dein_lazy.toml'), {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
-filetype plugin indent on
-syntax enable
+call plug#end()
 
 set encoding=UTF-8
 set fileencoding=UTF-8

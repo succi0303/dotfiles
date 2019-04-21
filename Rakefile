@@ -41,7 +41,7 @@ namespace :vim do
   directory bundle_dir = "#{ENV['HOME']}/.vim/bundle"
 
   desc 'Setup for vim'
-  task :setup => [backup_dir, :dein] do
+  task :setup => [backup_dir, :vim_plug] do
     puts 'vimのセットアップを完了しました。'
   end
 
@@ -52,6 +52,10 @@ namespace :vim do
        sh "git clone https://github.com/Shougo/dein.vim #{bundle_dir}/dein.vim"
        puts 'dein.vimをインストールしました。'
     end
+  end
+
+  task :vim_plug do
+    sh 'curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   end
 end
 
