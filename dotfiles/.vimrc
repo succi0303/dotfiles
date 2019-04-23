@@ -6,6 +6,8 @@ Plug 'cespare/vim-toml'
 Plug 'cohama/lexima.vim'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'easymotion/vim-easymotion'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'kannokanno/previm'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -96,6 +98,16 @@ syntax on
 
 " プラグイン
 
+" fzf.vim
+nnoremap <C-g>f :Files<CR>
+nnoremap <C-g>b :Buffers<CR>
+nnoremap <C-g>l :BLines<CR>
+nnoremap <C-g>L :Lines<CR>
+nnoremap <C-g>g :GFiles<CR>
+nnoremap <C-g>G :GFiles?<CR>
+nnoremap <C-g>c :BCommits<CR>
+nnoremap <C-g>C :Commits<CR>
+
 " open-browser
 let g:netw_nogx=1
 nmap gx <Plug>(openbrowser-smart-search)
@@ -137,9 +149,6 @@ let g:airline#extensions#tabline#formatter='default'
 if !exists('g:airline_symbols')
   let g:airline_symbols={}
 endif
-
-" fzf
-
 
 " NERD-Tree
 let g:NERDTreeShowHidden=1
