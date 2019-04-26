@@ -8,6 +8,8 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'easymotion/vim-easymotion'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'kannokanno/previm'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -107,6 +109,34 @@ nnoremap <C-g>g :GFiles<CR>
 nnoremap <C-g>G :GFiles?<CR>
 nnoremap <C-g>c :BCommits<CR>
 nnoremap <C-g>C :Commits<CR>
+
+" goyo.vim
+function! s:goyo_enter()
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+    set noshowmode
+    set noshowcmd
+    set scrolloff=999
+    Limelight
+endfunction
+
+function! s:goyo_leave()
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+    set showmode
+    set showcmd
+    set scrolloff=5
+    Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" limelight.vim
+let g:limelight_conceal_ctermfg='gray'
+let g:limelight_concieal_guifg='DarkGray'
+let g:limelight_default_coefficient = 0.5
+let g:limelight_paragraph_span=0
 
 " open-browser
 let g:netw_nogx=1
