@@ -117,6 +117,7 @@ function! s:goyo_enter()
     set noshowmode
     set noshowcmd
     set scrolloff=999
+    colorscheme Tomorrow
     Limelight
 endfunction
 
@@ -126,6 +127,7 @@ function! s:goyo_leave()
     set showmode
     set showcmd
     set scrolloff=5
+    colorscheme Tomorrow-Night-Blue
     Limelight!
 endfunction
 
