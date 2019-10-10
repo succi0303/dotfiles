@@ -49,6 +49,28 @@ namespace :vim do
   end
 end
 
+namespace :zsh do
+  desc 'Setup for zsh'
+  task :setup => [:zplug, :base16_shell] do
+  end
+
+  task :zplug do
+    if File.exists?("#{ENV['HOME']}/.zplug/init.zsh")
+      puts 'zplugはすでにインストールされています。'
+    else
+      sh 'curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh'
+    end
+  end
+
+  task :base16_shell do
+    if Dir.exist?("#{ENV['HOME']}/.config/base16-shell")
+      puts 'base16-shellはすでにインストールされています。'
+    else
+      sh 'git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell'
+    end
+  end
+end
+
 namespace :nvm do
   directory nvm_dir = "#{ENV['HOME']}/.nvm"
 
