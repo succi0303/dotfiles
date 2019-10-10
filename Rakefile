@@ -38,20 +38,10 @@ end
 
 namespace :vim do
   directory backup_dir = "#{ENV['HOME']}/.vim/backup"
-  directory bundle_dir = "#{ENV['HOME']}/.vim/bundle"
 
   desc 'Setup for vim'
   task :setup => [backup_dir, :vim_plug] do
     puts 'vimのセットアップを完了しました。'
-  end
-
-  task :dein => bundle_dir do
-    if File.exists? "#{bundle_dir}/dein.vim"
-      puts 'dein.vimがすでに存在します。'
-   else
-       sh "git clone https://github.com/Shougo/dein.vim #{bundle_dir}/dein.vim"
-       puts 'dein.vimをインストールしました。'
-    end
   end
 
   task :vim_plug do
