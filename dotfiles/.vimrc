@@ -4,7 +4,7 @@ call plug#begin('~/.vim/autoload/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'cohama/lexima.vim'
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
