@@ -94,8 +94,6 @@ set wildmode=list,full
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
-" カラースキーマ
-colorscheme Tomorrow-Night-Blue
 syntax on
 
 " プラグイン
@@ -180,6 +178,12 @@ let g:airline#extensions#tabline#formatter='default'
 "let g:airline_symbols_ascii=1
 if !exists('g:airline_symbols')
   let g:airline_symbols={}
+endif
+
+" base16
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
 endif
 
 " NERD-Tree
