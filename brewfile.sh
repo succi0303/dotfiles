@@ -7,6 +7,7 @@ echo "upgrade already-installed packages"
 brew upgrade
 
 echo "install brew-packages"
+brew install awscli
 brew install ctags
 brew install curl
 brew install ghq
