@@ -22,7 +22,7 @@ brew install wget
 brew install zsh
 
 echo "install cask-packages"
-brew tap caskroom/cask
+brew tap homebrew/cask-cask
 brew cask install appcleaner
 brew cask install docker
 brew cask install dropbox
