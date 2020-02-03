@@ -7,6 +7,7 @@ Plug 'cohama/lexima.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'

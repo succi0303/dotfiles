@@ -24,6 +24,7 @@ brew install zsh
 
 echo "install cask-packages"
 brew tap homebrew/cask-cask
+brew cask install alfred
 brew cask install appcleaner
 brew cask install docker
 brew cask install dropbox
