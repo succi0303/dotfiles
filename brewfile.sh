@@ -12,6 +12,7 @@ brew install ctags
 brew install curl
 brew install ghq
 brew install git
+brew install git-secrets
 brew install grip
 brew install hugo
 brew install reattach-to-user-namespace
