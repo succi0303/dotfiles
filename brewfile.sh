@@ -32,6 +32,7 @@ brew cask install docker
 brew cask install dropbox
 brew cask install dynalist
 brew cask install firefox
+brew cask install forklift
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install karabiner-elements
