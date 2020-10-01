@@ -1,0 +1,32 @@
+# 'brew tap'
+tap "homebrew/cask"
+
+# 'brew install'
+brew "awscli"
+brew "ctags"
+brew "curl"
+brew "ghq"
+brew "git"
+brew "git-secrets"
+brew "grip"
+brew "reattach-to-user-namespace"
+brew "tig"
+brew "tmux"
+brew "vim"
+brew "wget"
+brew "zsh"
+
+# 'brew cask install'
+cask "alfred"
+cask "appcleaner"
+cask "bartender"
+cask "docker"
+cask "dropbox"
+cask "firefox"
+cask "forklift"
+cask "google-chrome"
+cask "iterm2"
+cask "karabiner-elements"
+cask "qlmarkdown"
+cask "slack"
+cask "vagrant"
