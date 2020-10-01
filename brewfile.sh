@@ -14,7 +14,6 @@ brew install ghq
 brew install git
 brew install git-secrets
 brew install grip
-brew install hugo
 brew install reattach-to-user-namespace
 brew install sqlite
 brew install tig
