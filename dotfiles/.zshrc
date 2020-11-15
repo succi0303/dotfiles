@@ -218,7 +218,6 @@ zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug "mollifier/anyframe"
-zplug "motemen/ghq", as:command, from:gh-r
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "rupa/z", use:zsh
 
