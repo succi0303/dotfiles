@@ -11,6 +11,7 @@ brew "git-secrets"
 brew "reattach-to-user-namespace"
 brew "wget"
 brew "zsh"
+brew "zsh-completions"
 
 cask "alfred"
 cask "dropbox"
