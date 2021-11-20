@@ -177,5 +177,9 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lsa='ls -al'
 
+{{ if (eq .chezmoi.os "darwin") }}
+alias ls='ls -GwF'
+{{ end }}
+
 # starship
 eval "$(starship init zsh)"
