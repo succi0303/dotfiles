@@ -5,3 +5,6 @@
 [git]
     autoCommit = true
     autoPush = true
+
+[data]
+    email = "succi0303@gmail.com"
