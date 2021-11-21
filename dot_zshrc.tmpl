@@ -4,7 +4,10 @@ export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/sbin
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 export PATH=$PATH:'/mnt/c/Users/{{ .chezmoi.username }}/AppData/Local/Programs/Microsoft VS Code/bin'
+{{   end }}
+
 {{ end }}
 
 # zplug
