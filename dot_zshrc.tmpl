@@ -97,8 +97,8 @@ zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*' keep-prefix
 zstyle ':completion:*' recent-dirs-insert both
 
-autoload  -U +X bashcompinit
-bashcompinit
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 
 # change directory
 setopt auto_cd
