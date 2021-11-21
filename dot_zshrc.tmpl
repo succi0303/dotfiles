@@ -1,3 +1,12 @@
+{{ if (eq .chezmoi.os "darwin") }}
+{{ else if (eq .chezmoi.os "linux") }}
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/sbin
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+export PATH=$PATH:'/mnt/c/Users/{{ .chezmoi.username }}/AppData/Local/Programs/Microsoft VS Code/bin'
+{{ end }}
+
 # zplug
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -199,6 +208,8 @@ alias lsa='ls -al'
 
 {{ if (eq .chezmoi.os "darwin") }}
 alias ls='ls -GwF'
+{{ else if (eq .chezmoi.os "linux") }}
+alias ls='ls --color=auto -p'
 {{ end }}
 
 # starship
