@@ -1,3 +1,22 @@
 [user]
 	name = {{ .chezmoi.username }}
 	email = {{ .email }}
+
+[color]
+	ui = auto
+
+[commit]
+	verbose = true
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+	ff = only
+
+[status]
+	showUntackedFiles = all
