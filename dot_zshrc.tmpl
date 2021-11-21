@@ -215,6 +215,9 @@ alias ls='ls -GwF'
 alias ls='ls --color=auto -p'
 {{ end }}
 
+# awscli
+complete -C '$(brew --prefix)/bin/aws_completer' aws
+
 # fzf
 alias fzf='fzf --reverse --height=50%'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
