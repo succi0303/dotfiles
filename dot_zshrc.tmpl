@@ -233,5 +233,8 @@ function fzf-ghq() {
 zle -N fzf-ghq
 bindkey '^gr' fzf-ghq
 
+# anyenv
+eval "$(anyenv init -)""
+
 # starship
 eval "$(starship init zsh)"
