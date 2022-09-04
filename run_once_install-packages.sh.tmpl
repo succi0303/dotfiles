@@ -2,8 +2,8 @@
 
 {{ if eq .chezmoi.os "darwin" }}
 
-brew bundle --global
-
 {{ else if eq .chzmoi.os "linux" }}
 
-{{ end -}}
+{{ end }}
+
+brew bundle --global
