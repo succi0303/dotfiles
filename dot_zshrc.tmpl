@@ -6,6 +6,9 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 export PATH=$PATH:'/mnt/c/Users/{{ .chezmoi.username }}/AppData/Local/Programs/Microsoft VS Code/bin'
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+/mnt/c/Windows/system32/wsl.exe -d wsl-vpnkit service wsl-vpnkit start
 {{   end }}
 
 {{ end }}
