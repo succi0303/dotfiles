@@ -13,17 +13,22 @@ brew "gh"
 brew "git"
 brew "git-secrets"
 brew "jq"
-brew "qemu"
 brew "starship"
 brew "tig"
 brew "tmux"
 brew "vim"
 brew "wget"
 
-#cask "alfred"
-cask "firefox"
-cask "google-chrome"
-cask "iterm2"
-cask "karabiner-elements"
-cask "utm"
-#cask "visual-studio-code"
+if OS.mac?
+
+  brew "qemu"
+
+  #cask "alfred"
+  cask "firefox"
+  cask "google-chrome"
+  cask "iterm2"
+  cask "karabiner-elements"
+  cask "utm"
+  #cask "visual-studio-code"
+
+end
