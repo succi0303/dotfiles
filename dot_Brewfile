@@ -21,7 +21,9 @@ brew "wget"
 
 if OS.mac?
 
+  brew "opensc"
   brew "qemu"
+  brew "ykman"
 
   #cask "alfred"
   cask "firefox"
