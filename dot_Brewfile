@@ -25,7 +25,6 @@ brew "wget"
 
 if OS.mac?
 
-  brew "opensc"
   brew "qemu"
   brew "ykman"
 
