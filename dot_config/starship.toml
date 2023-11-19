@@ -26,9 +26,9 @@ disabled = false
 
 [time]
 disabled = false
-format = '🕙[\[ $time \ ]]($style) '
+format = '🕙[\[ $time \]]($style) '
 time_format = '%T'
-utc_time_offset = '-5'
+utc_time_offset = '+9'
 time_range = '10:00:00-14:00:00'
 
 [username]
