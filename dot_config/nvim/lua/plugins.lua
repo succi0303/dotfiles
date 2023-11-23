@@ -14,15 +14,66 @@ return {
     end
   },
   {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    'vim-jp/vimdoc-ja'
+  },
+  {
+    'neovim/nvim-lspconfig'
+  },
+  {
+    'williamboman/mason.nvim'
+  },
+  {
+    'williamboman/mason-lspconfig'
+  },
+  {
+    'jose-elias-alvarez/null-ls.nvim'
+  },
+  {
+    'jayp0521/mason-null-ls.nvim'
+  },
+  {
+    'stevearc/dressing.nvim'
+  },
+  {
+    'tami5/lspsaga.nvim'
+  },
+  {
+    'ray-x/lsp_signature.nvim'
+  },
+  {
+    'onsails/lspkind-nvim'
+  },
+  {
+    'j-hui/fidget.nvim'
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = { 'hrsh7th/cmp-emoji' },
     config = function()
-      require('lualine').setup()
+      enabled = true
     end
   },
   {
+    'hrsh7th/cmp-nvim-lsp'
+  },
+  {
+    'hrsh7th/cmp-buffer'
+  },
+  {
+    'hrsh7th/cmp-path'
+  },
+  {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+        config = function()
+          require('telescope').load_extension('fzf')
+        end
+      }
+    },
     config = function()
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<leader><leader>f', builtin.find_files)
