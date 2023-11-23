@@ -1,0 +1,6 @@
+{
+  "darcula": { "branch": "master", "commit": "92e8f51d82b36fc6cca148eb98dd3e4cfacc92cd" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "lualine.nvim": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },
+  "nvim-web-devicons": { "branch": "master", "commit": "cdbcca210cf3655aa9b31ebf2422763ecd85ee5c" }
+}
