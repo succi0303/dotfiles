@@ -1,9 +1,9 @@
 return {
   -- Plugins will be added here accordingly
   {
-    'blueshirts/darcula',
+    'sainnhe/gruvbox-material',
     config = function()
-      vim.cmd([[colorscheme darcula]])
+      vim.cmd([[colorscheme gruvbox-material]])
     end
   },
   {
