@@ -116,7 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Homebrew / Linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# anyenv
+eval "$(anyenv init -)"
 
 # Starship
 eval "$(starship init bash)"

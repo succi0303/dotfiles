@@ -3,20 +3,16 @@ call plug#begin('~/.vim/autoload/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'cohama/lexima.vim'
-Plug 'dense-analysis/ale'
 Plug 'easymotion/vim-easymotion'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'previm/previm'
-Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'tyru/open-browser.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -84,23 +80,21 @@ if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
-" ale
-let g:ale_sign_column_always=1
-let g:ale_fix_on_save=1
-let g:ale_linters={
-      \ 'cfn.yaml': ['cfn-lint'],
-      \ 'javascript': ['eslint'],
-      \ 'json': ['jsonlint'],
-      \ 'yaml': ['prettier']
-      \}
-let g:ale_fixers={
-      \ 'javascript': ['prettier'],
-      \ 'json': ['fixjson'],
-      \ 'css': ['prettier'],
-      \ 'yaml': ['prettier']
-      \}
-nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
-nmap <silent> <C-w>j <Plug>(ale_next_wrap)
+colorscheme nightfox
+
+" lightline.vim
+  let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\ 'active': {
+	\   'left': [ [ 'mode', 'paste' ],
+	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+	\ },
+	\ 'component_function': {
+	\   'cocstatus': 'coc#status'
+	\ },
+	\ }
+  " Use autocmd to force lightline update.
+  autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " vim-easymotion
 let g:EasyMotion_startofline=0
@@ -134,3 +128,37 @@ nnoremap <C-g>C :Commits<CR>
 let g:netw_nogx=1
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+" coc.nvim
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+nmap <C-e> <Cmd>CocCommand explorer<CR>
+let g:coc_global_extensions = [
+      \ 'coc-cfn-lint',
+      \ 'coc-css',
+      \ 'coc-docker',
+      \ 'coc-eslint',
+      \ 'coc-explorer',
+      \ 'coc-fzf-preview',
+      \ 'coc-git',
+      \ 'coc-go',
+      \ 'coc-html',
+      \ 'coc-json',
+      \ 'coc-lua',
+      \ 'coc-prettier',
+      \ 'coc-python',
+      \ 'coc-rust-analyzer',
+      \ 'coc-sh',
+      \ 'coc-snippets',
+      \ 'coc-solargraph',
+      \ 'coc-sql',
+      \ 'coc-stylelint',
+      \ 'coc-toml',
+      \ 'coc-tslint',
+      \ 'coc-tsserver',
+      \ 'coc-yaml'
+      \ ]
