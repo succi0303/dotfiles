@@ -36,6 +36,7 @@ set clipboard=unnamed
 set wildmode=list,full
 set nobackup
 set noswapfile
+set nowritebackup
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " Indent settings
