@@ -1,0 +1,18 @@
+theme = Ayu Mirage
+font-family = UDEV Gothic NF
+font-size = 16
+adjust-cell-height = 20%
+
+window-padding-x = 20
+window-padding-y = 5
+window-padding-balance = true
+window-theme = ghostty
+macos-non-native-fullscreen = true
+background-opacity = 0.8
+
+quick-terminal-position = center
+quick-terminal-animation-duration = 0.3
+initial-window = false
+
+keybind = global:ctrl+;=toggle_quick_terminal
+keybind = global:command+enter=toggle_fullscreen
